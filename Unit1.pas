@@ -52,12 +52,10 @@ end;
 
 procedure TForm1.btn2Click(Sender: TObject);
 var dynCtgButt : TCategoryButtons;
-    klawisz1 : TButtonCategory;
+    kategoria : TButtonCategory;
      i: integer;
 begin
-   {klawisz1 := TButtonCategory.Create()
-   klawisz1.Collapsed:=False;
-   klawisz1.Color:=clRed;   }
+
 
    dynCtgButt:=TCategoryButtons.Create(Self);
    dynCtgButt.Parent:= Form1;
@@ -66,13 +64,15 @@ begin
    dynCtgButt.Height:=120;
    dynCtgButt.Width:=150;
 
-   for i:=0 to 10 do begin
+ {  for i:=0 to 10 do begin
     dynCtgButt.Categories[1].Items[i] := TButtonItem.Create(dynCtgButt.Categories[1].Items);
     dynCtgButt.Categories[1].Items[i].Caption := 'Something';
     dynCtgButt.Categories[1].Items[i].OnClick := DynamicMenuButtonClick;
   end;
+   }
+   kategoria:= dynCtgButt.Categories.Add;
 
-   //dynCtgButt.Categories.AddItem(klawisz1,0);
+
 
 end;
 
@@ -85,14 +85,18 @@ begin
     SeriesOfButtons := TCategoryButtons.Create(Self);
     SeriesOfButtons.Parent := Self;
 
-    SeriesOfButtons.Left := 8;
+    SeriesOfButtons.Left := 20;
     SeriesOfButtons.Top  := 40;
+    SeriesOfButtons.Height:=120;
+    SeriesOfButtons.Width:=150;
     SeriesOfButtons.BorderStyle := bsNone;
     SeriesOfButtons.ButtonOptions:=[boFullSize, boShowCaptions];
+    SeriesOfButtons.Color:=clLime;
 
     Category := SeriesOfButtons.Categories.Add;
     btn := Category.Items.Add();
     btn.Caption:='Zapisz';
+    btn.Category.Color:=clRed;
     btn.OnClick:=dynCtgZapisz;
 
     btn1 := Category.Items.Add();
@@ -101,6 +105,7 @@ begin
 
     btn2 := Category.Items.Add();
     btn2.Caption:='Zamknij';
+
     btn2.OnClick:=dynCtgZamknij;
 
 end;
@@ -138,7 +143,7 @@ begin
     dynButton.Left:=20;
     dynButton.Top:=20;
     dynButton.Height:=55;
-    dynButton.Width:=70;
+    dynButton.Width:=100;
     dynButton.Caption:='Jestem dynamiczny';
     dynButton.OnClick:=dynButtonClick;
 
