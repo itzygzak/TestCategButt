@@ -15,12 +15,14 @@ type
     btn3: TButton;
     procedure btn1Click(Sender: TObject);
     procedure dynButtonClick(Sender: TObject);
-    procedure btn2Click(Sender: TObject);
     procedure DynamicMenuButtonClick(Sender: TObject);
     procedure btn3Click(Sender: TObject);
     procedure dynCtgZapisz(Sender: TObject);
     procedure dynCtgAnuluj(Sender: TObject);
     procedure dynCtgZamknij(Sender: TObject);
+    procedure dynZniszcz(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,10 +31,55 @@ type
 
 var
   Form1: TForm1;
+    SeriesOfButtons : TCategoryButtons;
+    Category        : TButtonCategory;
+    btn,btn1,btn2   : TButtonItem;
+
 
 implementation
 
 {$R *.dfm}
+
+procedure TForm1.dynZniszcz(Sender: TObject);
+begin
+  //
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+{var
+    SeriesOfButtons : TCategoryButtons;
+    Category        : TButtonCategory;
+    btn,btn1,btn2,btn3   : TButtonItem;}
+begin
+    SeriesOfButtons := TCategoryButtons.Create(Self);
+    SeriesOfButtons.Parent := Self;
+
+    SeriesOfButtons.Left := 20;
+    SeriesOfButtons.Top  := 40;
+    SeriesOfButtons.Height:=120;
+    SeriesOfButtons.Width:=150;
+    SeriesOfButtons.BorderStyle := bsNone;
+    SeriesOfButtons.ButtonOptions:=[boFullSize, boShowCaptions];
+    SeriesOfButtons.Color:=clLime;
+
+    Category := SeriesOfButtons.Categories.Add;
+    btn := Category.Items.Add();
+    btn.Caption:='Zapisz';
+    btn.Category.Color:=clRed;
+    btn.OnClick:=dynCtgZapisz;
+
+    btn1 := Category.Items.Add();
+    btn1.Caption:='Anuluj';
+    btn1.OnClick:=dynCtgAnuluj;
+
+    btn2 := Category.Items.Add();
+    btn2.Caption:='Zamknij';
+    btn2.OnClick:=dynCtgZamknij;
+
+
+
+
+end;
 
 procedure TForm1.dynCtgZapisz(Sender: TObject);
 begin
@@ -51,29 +98,8 @@ end;
 
 
 procedure TForm1.btn2Click(Sender: TObject);
-var dynCtgButt : TCategoryButtons;
-    kategoria : TButtonCategory;
-     i: integer;
 begin
-
-
-   dynCtgButt:=TCategoryButtons.Create(Self);
-   dynCtgButt.Parent:= Form1;
-   dynCtgButt.Left:=20;
-   dynCtgButt.Top:=40;
-   dynCtgButt.Height:=120;
-   dynCtgButt.Width:=150;
-
- {  for i:=0 to 10 do begin
-    dynCtgButt.Categories[1].Items[i] := TButtonItem.Create(dynCtgButt.Categories[1].Items);
-    dynCtgButt.Categories[1].Items[i].Caption := 'Something';
-    dynCtgButt.Categories[1].Items[i].OnClick := DynamicMenuButtonClick;
-  end;
-   }
-   kategoria:= dynCtgButt.Categories.Add;
-
-
-
+btn2.Destroy;
 end;
 
 procedure TForm1.btn3Click(Sender: TObject);
@@ -105,7 +131,6 @@ begin
 
     btn2 := Category.Items.Add();
     btn2.Caption:='Zamknij';
-
     btn2.OnClick:=dynCtgZamknij;
 
 end;
