@@ -54,23 +54,23 @@ object Form1: TForm1
     SelectedButtonColor = 15132390
     TabOrder = 0
   end
-  object btn1: TButton
+  object btn1a: TButton
     Left = 656
     Top = 232
     Width = 75
     Height = 25
-    Caption = 'btn1'
+    Caption = 'btn1a'
     TabOrder = 1
-    OnClick = btn1Click
+    OnClick = btn1aClick
   end
-  object btn2: TButton
+  object btn2a: TButton
     Left = 656
     Top = 264
     Width = 75
     Height = 25
-    Caption = 'btn2'
+    Caption = 'btn2a'
     TabOrder = 2
-    OnClick = btn2Click
+    OnClick = btn2aClick
   end
   object mmo1: TMemo
     Left = 344
@@ -81,13 +81,13 @@ object Form1: TForm1
       'mmo1')
     TabOrder = 3
   end
-  object btn3: TButton
+  object btn3a: TButton
     Left = 656
     Top = 295
     Width = 75
     Height = 25
-    Caption = 'btn3'
+    Caption = 'btn3a'
     TabOrder = 4
-    OnClick = btn3Click
+    OnClick = btn3aClick
   end
 end

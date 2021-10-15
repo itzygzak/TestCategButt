@@ -9,20 +9,19 @@ uses
 type
   TForm1 = class(TForm)
     ctgryBtns1: TCategoryButtons;
-    btn1: TButton;
-    btn2: TButton;
+    btn1a: TButton;
+    btn2a: TButton;
     mmo1: TMemo;
-    btn3: TButton;
-    procedure btn1Click(Sender: TObject);
+    btn3a: TButton;
+    procedure btn1aClick(Sender: TObject);
     procedure dynButtonClick(Sender: TObject);
     procedure DynamicMenuButtonClick(Sender: TObject);
-    procedure btn3Click(Sender: TObject);
+    procedure btn3aClick(Sender: TObject);
     procedure dynCtgZapisz(Sender: TObject);
     procedure dynCtgAnuluj(Sender: TObject);
     procedure dynCtgZamknij(Sender: TObject);
-    procedure dynZniszcz(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure btn2Click(Sender: TObject);
+    procedure btn2aClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,7 +30,7 @@ type
 
 var
   Form1: TForm1;
-    SeriesOfButtons : TCategoryButtons;
+  SeriesOfButtons : TCategoryButtons;
     Category        : TButtonCategory;
     btn,btn1,btn2   : TButtonItem;
 
@@ -40,18 +39,13 @@ implementation
 
 {$R *.dfm}
 
-procedure TForm1.dynZniszcz(Sender: TObject);
-begin
-  //
-end;
-
 procedure TForm1.FormCreate(Sender: TObject);
-{var
+var
     SeriesOfButtons : TCategoryButtons;
     Category        : TButtonCategory;
-    btn,btn1,btn2,btn3   : TButtonItem;}
+    btn,btn1,btn2   : TButtonItem;
 begin
-    SeriesOfButtons := TCategoryButtons.Create(Self);
+{    SeriesOfButtons := TCategoryButtons.Create(Self);
     SeriesOfButtons.Parent := Self;
 
     SeriesOfButtons.Left := 20;
@@ -63,6 +57,7 @@ begin
     SeriesOfButtons.Color:=clLime;
 
     Category := SeriesOfButtons.Categories.Add;
+
     btn := Category.Items.Add();
     btn.Caption:='Zapisz';
     btn.Category.Color:=clRed;
@@ -75,10 +70,7 @@ begin
     btn2 := Category.Items.Add();
     btn2.Caption:='Zamknij';
     btn2.OnClick:=dynCtgZamknij;
-
-
-
-
+ }
 end;
 
 procedure TForm1.dynCtgZapisz(Sender: TObject);
@@ -97,16 +89,16 @@ begin
 end;
 
 
-procedure TForm1.btn2Click(Sender: TObject);
+procedure TForm1.btn2aClick(Sender: TObject);
 begin
-btn2.Destroy;
+btn1.Destroy;
 end;
 
-procedure TForm1.btn3Click(Sender: TObject);
-var
+procedure TForm1.btn3aClick(Sender: TObject);
+{var
     SeriesOfButtons : TCategoryButtons;
     Category        : TButtonCategory;
-    btn,btn1,btn2   : TButtonItem;
+    btn,btn1,btn2   : TButtonItem;  }
 begin
     SeriesOfButtons := TCategoryButtons.Create(Self);
     SeriesOfButtons.Parent := Self;
@@ -160,7 +152,7 @@ begin
     ShowMessage('Sender is TCategoryButtons');}
 end;
 
-procedure TForm1.btn1Click(Sender: TObject);
+procedure TForm1.btn1aClick(Sender: TObject);
 var dynButton : TButton;
 begin
     dynButton := TButton.Create(Self);
