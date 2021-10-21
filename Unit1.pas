@@ -6,13 +6,20 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.CategoryButtons;
 
-type
+uses hook
+  TKeyboardHook.Create;
+ KeyboardHook.OnPreExecute: = KeyboardHookPREExecute;
+  KeyboardHook.Active: = True;
+  end; // obs³uguje KeyboardPack OnPREExecute
+
+  type
   TForm1 = class(TForm)
     ctgryBtns1: TCategoryButtons;
     btn1a: TButton;
     btn2a: TButton;
     mmo1: TMemo;
     btn3a: TButton;
+    btn1234: TButton;
     procedure btn1aClick(Sender: TObject);
     procedure dynButtonClick(Sender: TObject);
     procedure DynamicMenuButtonClick(Sender: TObject);
@@ -22,6 +29,7 @@ type
     procedure dynCtgZamknij(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btn2aClick(Sender: TObject);
+    procedure btn1234Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -40,16 +48,16 @@ implementation
 {$R *.dfm}
 
 procedure TForm1.FormCreate(Sender: TObject);
-var
+{var
     SeriesOfButtons : TCategoryButtons;
     Category        : TButtonCategory;
-    btn,btn1,btn2   : TButtonItem;
+    btn,btn1,btn2   : TButtonItem;}
 begin
-{    SeriesOfButtons := TCategoryButtons.Create(Self);
+    SeriesOfButtons := TCategoryButtons.Create(Self);
     SeriesOfButtons.Parent := Self;
 
     SeriesOfButtons.Left := 20;
-    SeriesOfButtons.Top  := 40;
+    SeriesOfButtons.Top  := 200;
     SeriesOfButtons.Height:=120;
     SeriesOfButtons.Width:=150;
     SeriesOfButtons.BorderStyle := bsNone;
@@ -70,7 +78,7 @@ begin
     btn2 := Category.Items.Add();
     btn2.Caption:='Zamknij';
     btn2.OnClick:=dynCtgZamknij;
- }
+
 end;
 
 procedure TForm1.dynCtgZapisz(Sender: TObject);
@@ -150,6 +158,21 @@ begin
 
   if sender is TCategoryButtons then //true
     ShowMessage('Sender is TCategoryButtons');}
+end;
+
+procedure TForm1.btn1234Click(Sender: TObject);
+begin
+{
+
+
+  procedura TMainForm.KeyboardHookPREExecute (Hook: THook; var Hookmsg: THookMsg);
+  var Klucz: S³owo;
+  begin // Tutaj mo¿esz wybraæ, czy chcesz zwróciæ
+  // kluczowy skok do aplikacji, czy nie
+  Hookmsg.Result: = If Then (cbEatKeyStrokes.Checked, 1, 0);
+  Klucz: = Hookmsg.WPARAM; Podpis: = Char (klucz); koniec;
+
+}
 end;
 
 procedure TForm1.btn1aClick(Sender: TObject);
