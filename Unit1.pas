@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.CategoryButtons;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.CategoryButtons,
+  Vcl.Buttons, Vcl.ExtCtrls, Vcl.WinXCtrls;
 
 type
   TForm1 = class(TForm)
@@ -15,6 +16,10 @@ type
     btn3a: TButton;
     btn1: TButton;
     edttitle: TEdit;
+    spltvw1: TSplitView;
+    ctgryPnlGrp1: TCategoryPanelGroup;
+    ctgryPnl1: TCategoryPanel;
+    btn2: TBitBtn;
     procedure btn1aClick(Sender: TObject);
     procedure dynButtonClick(Sender: TObject);
     procedure DynamicMenuButtonClick(Sender: TObject);

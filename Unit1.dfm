@@ -107,4 +107,45 @@ object Form1: TForm1
     TabOrder = 6
     Text = 'edttitle'
   end
+  object spltvw1: TSplitView
+    Left = 0
+    Top = 0
+    Width = 225
+    Height = 439
+    OpenedWidth = 200
+    Placement = svpLeft
+    TabOrder = 7
+    object ctgryPnlGrp1: TCategoryPanelGroup
+      Left = 0
+      Top = 0
+      Height = 439
+      VertScrollBar.Tracking = True
+      HeaderFont.Charset = DEFAULT_CHARSET
+      HeaderFont.Color = clWindowText
+      HeaderFont.Height = -11
+      HeaderFont.Name = 'Tahoma'
+      HeaderFont.Style = []
+      TabOrder = 0
+      ExplicitLeft = 24
+      ExplicitTop = 32
+      ExplicitHeight = 350
+      object ctgryPnl1: TCategoryPanel
+        Top = 0
+        Caption = 'ctgryPnl1'
+        TabOrder = 0
+        object btn2: TBitBtn
+          Left = 0
+          Top = 0
+          Width = 196
+          Height = 25
+          Align = alTop
+          Caption = 'btn2'
+          TabOrder = 0
+          ExplicitLeft = 32
+          ExplicitTop = 24
+          ExplicitWidth = 75
+        end
+      end
+    end
+  end
 end
