@@ -7,29 +7,19 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.CategoryButtons,
   Vcl.Buttons, Vcl.ExtCtrls, Vcl.WinXCtrls;
 
-uses hook
-  TKeyboardHook.Create;
- KeyboardHook.OnPreExecute: = KeyboardHookPREExecute;
-  KeyboardHook.Active: = True;
-  end; // obs³uguje KeyboardPack OnPREExecute
-
-  type
+type
   TForm1 = class(TForm)
     ctgryBtns1: TCategoryButtons;
     btn1a: TButton;
     btn2a: TButton;
     mmo1: TMemo;
     btn3a: TButton;
-<<<<<<< HEAD
     btn1: TButton;
     edttitle: TEdit;
     spltvw1: TSplitView;
     ctgryPnlGrp1: TCategoryPanelGroup;
     ctgryPnl1: TCategoryPanel;
     btn2: TBitBtn;
-=======
-    btn1234: TButton;
->>>>>>> c86b3e5e355c2e7b7ea0d7aa7643eaad10792e1a
     procedure btn1aClick(Sender: TObject);
     procedure dynButtonClick(Sender: TObject);
     procedure DynamicMenuButtonClick(Sender: TObject);
@@ -39,11 +29,7 @@ uses hook
     procedure dynCtgZamknij(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btn2aClick(Sender: TObject);
-<<<<<<< HEAD
     procedure btn1Click(Sender: TObject);
-=======
-    procedure btn1234Click(Sender: TObject);
->>>>>>> c86b3e5e355c2e7b7ea0d7aa7643eaad10792e1a
   private
     { Private declarations }
   public
@@ -62,20 +48,16 @@ implementation
 {$R *.dfm}
 
 procedure TForm1.FormCreate(Sender: TObject);
-{var
+var
     SeriesOfButtons : TCategoryButtons;
     Category        : TButtonCategory;
-<<<<<<< HEAD
    // btn,btn1,btn2   : TButtonItem;
-=======
-    btn,btn1,btn2   : TButtonItem;}
->>>>>>> c86b3e5e355c2e7b7ea0d7aa7643eaad10792e1a
 begin
-    SeriesOfButtons := TCategoryButtons.Create(Self);
+{    SeriesOfButtons := TCategoryButtons.Create(Self);
     SeriesOfButtons.Parent := Self;
 
     SeriesOfButtons.Left := 20;
-    SeriesOfButtons.Top  := 200;
+    SeriesOfButtons.Top  := 40;
     SeriesOfButtons.Height:=120;
     SeriesOfButtons.Width:=150;
     SeriesOfButtons.BorderStyle := bsNone;
@@ -96,7 +78,7 @@ begin
     btn2 := Category.Items.Add();
     btn2.Caption:='Zamknij';
     btn2.OnClick:=dynCtgZamknij;
-
+ }
 end;
 
 procedure TForm1.dynCtgZapisz(Sender: TObject);
@@ -198,21 +180,6 @@ begin
 
   if sender is TCategoryButtons then //true
     ShowMessage('Sender is TCategoryButtons');}
-end;
-
-procedure TForm1.btn1234Click(Sender: TObject);
-begin
-{
-
-
-  procedura TMainForm.KeyboardHookPREExecute (Hook: THook; var Hookmsg: THookMsg);
-  var Klucz: S³owo;
-  begin // Tutaj mo¿esz wybraæ, czy chcesz zwróciæ
-  // kluczowy skok do aplikacji, czy nie
-  Hookmsg.Result: = If Then (cbEatKeyStrokes.Checked, 1, 0);
-  Klucz: = Hookmsg.WPARAM; Podpis: = Char (klucz); koniec;
-
-}
 end;
 
 procedure TForm1.btn1aClick(Sender: TObject);

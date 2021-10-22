@@ -1,0 +1,17 @@
+__history
+__recovery
+Win32
+ikony
+Wersje
+ModelSupport_DziennikZaj
+*.dproj
+*.exe
+*.dll
+*.ini
+*.dcu
+*.html
+*.ico
+*.png
+*.txt
+*.vlb
+
