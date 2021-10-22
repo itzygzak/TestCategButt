@@ -20,6 +20,12 @@ type
     ctgryPnlGrp1: TCategoryPanelGroup;
     ctgryPnl1: TCategoryPanel;
     btn2: TBitBtn;
+    btn3: TBitBtn;
+    btn4: TBitBtn;
+    btn5: TBitBtn;
+    btn6: TBitBtn;
+    btn7: TButton;
+    btn8: TButton;
     procedure btn1aClick(Sender: TObject);
     procedure dynButtonClick(Sender: TObject);
     procedure DynamicMenuButtonClick(Sender: TObject);
@@ -30,6 +36,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure btn2aClick(Sender: TObject);
     procedure btn1Click(Sender: TObject);
+    procedure btn7Click(Sender: TObject);
+    procedure btn8Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -114,14 +122,22 @@ begin
 if (not SetPriorityClass(hProc,IDLE_PRIORITY_CLASS)) then
 ShowMessage('Nie mo¿na zmieniæ priorytetu ('+edtTitle.Text+')');
 CloseHandle(hProc);
+ShowMessage('To jest to okno');
 end;
 end
 else
 ShowMessage('Okno o podanej nazwie nie istnieje ('+edtTitle.Text+')');
 end;
+
 procedure TForm1.btn2aClick(Sender: TObject);
 begin
-btn1.Destroy;
+//btn1.Destroy;
+if spltVw1.Opened = True then
+  //  btn4.Layout := blGlyphLeft;
+    spltVw1.Close
+
+  else
+    spltVw1.Open;
 end;
 
 procedure TForm1.btn3aClick(Sender: TObject);
@@ -151,12 +167,23 @@ begin
     btn1.Caption:='Anuluj';
     btn1.OnClick:=dynCtgAnuluj;
    }
-    btn2 := Category.Items.Add();
+{    btn2 := Category.Items.Add();
     btn2.Caption:='Zamknij';
     btn2.OnClick:=dynCtgZamknij;
-
+ }
 end;
 
+
+procedure TForm1.btn7Click(Sender: TObject);
+begin
+    btn4.Layout := blGlyphLeft;
+    btn5.Layout := blGlyphLeft;
+end;
+
+procedure TForm1.btn8Click(Sender: TObject);
+begin
+Form1.Caption:='Ala ma kota';
+end;
 
 procedure TForm1.dynButtonClick(Sender: TObject);
 begin

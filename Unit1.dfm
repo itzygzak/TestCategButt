@@ -64,7 +64,7 @@ object Form1: TForm1
     OnClick = btn1aClick
   end
   object btn2a: TButton
-    Left = 656
+    Left = 464
     Top = 264
     Width = 75
     Height = 25
@@ -110,8 +110,10 @@ object Form1: TForm1
   object spltvw1: TSplitView
     Left = 0
     Top = 0
-    Width = 225
+    Width = 200
     Height = 439
+    CloseStyle = svcCompact
+    CompactWidth = 40
     OpenedWidth = 200
     Placement = svpLeft
     TabOrder = 7
@@ -126,26 +128,88 @@ object Form1: TForm1
       HeaderFont.Name = 'Tahoma'
       HeaderFont.Style = []
       TabOrder = 0
-      ExplicitLeft = 24
-      ExplicitTop = 32
-      ExplicitHeight = 350
       object ctgryPnl1: TCategoryPanel
         Top = 0
+        Height = 256
         Caption = 'ctgryPnl1'
+        Color = 10066227
         TabOrder = 0
         object btn2: TBitBtn
           Left = 0
-          Top = 0
+          Top = 140
           Width = 196
           Height = 25
           Align = alTop
-          Caption = 'btn2'
+          Caption = 'e'
+          Margin = 5
           TabOrder = 0
-          ExplicitLeft = 32
-          ExplicitTop = 24
-          ExplicitWidth = 75
+        end
+        object btn3: TBitBtn
+          Left = 0
+          Top = 105
+          Width = 196
+          Height = 35
+          Align = alTop
+          Caption = 'd'
+          Enabled = False
+          Margin = 5
+          TabOrder = 1
+        end
+        object btn4: TBitBtn
+          Left = 0
+          Top = 70
+          Width = 196
+          Height = 35
+          Align = alTop
+          Kind = bkYes
+          Layout = blGlyphRight
+          Margin = 5
+          NumGlyphs = 2
+          TabOrder = 2
+          ExplicitLeft = 1
+        end
+        object btn5: TBitBtn
+          Left = 0
+          Top = 35
+          Width = 196
+          Height = 35
+          Hint = 'Dupint'
+          Align = alTop
+          Kind = bkAbort
+          Layout = blGlyphRight
+          Margin = 5
+          NumGlyphs = 2
+          TabOrder = 3
+        end
+        object btn6: TBitBtn
+          Left = 0
+          Top = 0
+          Width = 196
+          Height = 35
+          Align = alTop
+          Caption = 'a'
+          Margin = 5
+          TabOrder = 4
         end
       end
     end
+  end
+  object btn7: TButton
+    Left = 672
+    Top = 376
+    Width = 75
+    Height = 25
+    Caption = 'btn7'
+    TabOrder = 8
+    OnClick = btn7Click
+  end
+  object btn8: TButton
+    Left = 320
+    Top = 336
+    Width = 75
+    Height = 25
+    Caption = 'btn8'
+    TabOrder = 9
+    OnClick = btn8Click
   end
 end
