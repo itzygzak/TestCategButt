@@ -73,8 +73,8 @@ object Form1: TForm1
     OnClick = btn2aClick
   end
   object mmo1: TMemo
-    Left = 344
-    Top = 288
+    Left = 424
+    Top = 128
     Width = 185
     Height = 89
     Lines.Strings = (
@@ -89,5 +89,22 @@ object Form1: TForm1
     Caption = 'btn3a'
     TabOrder = 4
     OnClick = btn3aClick
+  end
+  object btn1: TButton
+    Left = 520
+    Top = 8
+    Width = 75
+    Height = 25
+    Caption = 'btn1'
+    TabOrder = 5
+    OnClick = btn1Click
+  end
+  object edttitle: TEdit
+    Left = 474
+    Top = 64
+    Width = 121
+    Height = 21
+    TabOrder = 6
+    Text = 'edttitle'
   end
 end

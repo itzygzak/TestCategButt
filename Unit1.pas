@@ -13,6 +13,8 @@ type
     btn2a: TButton;
     mmo1: TMemo;
     btn3a: TButton;
+    btn1: TButton;
+    edttitle: TEdit;
     procedure btn1aClick(Sender: TObject);
     procedure dynButtonClick(Sender: TObject);
     procedure DynamicMenuButtonClick(Sender: TObject);
@@ -22,6 +24,7 @@ type
     procedure dynCtgZamknij(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btn2aClick(Sender: TObject);
+    procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,7 +46,7 @@ procedure TForm1.FormCreate(Sender: TObject);
 var
     SeriesOfButtons : TCategoryButtons;
     Category        : TButtonCategory;
-    btn,btn1,btn2   : TButtonItem;
+   // btn,btn1,btn2   : TButtonItem;
 begin
 {    SeriesOfButtons := TCategoryButtons.Create(Self);
     SeriesOfButtons.Parent := Self;
@@ -89,6 +92,28 @@ begin
 end;
 
 
+procedure TForm1.btn1Click(Sender: TObject);
+ var hWnd :THandle;
+ ProcessId :DWORD;
+ hProc :THandle;
+begin
+hWnd := FindWindow(nil,PCHar(edtTitle.Text));
+
+if (IsWindow(hWnd)) then
+begin
+ProcessId:=0;
+GetWindowThreadProcessId(hWnd, @ProcessId);
+hProc := OpenProcess(PROCESS_SET_INFORMATION, FALSE, ProcessId);
+if (hProc<>0) then
+begin
+if (not SetPriorityClass(hProc,IDLE_PRIORITY_CLASS)) then
+ShowMessage('Nie mo¿na zmieniæ priorytetu ('+edtTitle.Text+')');
+CloseHandle(hProc);
+end;
+end
+else
+ShowMessage('Okno o podanej nazwie nie istnieje ('+edtTitle.Text+')');
+end;
 procedure TForm1.btn2aClick(Sender: TObject);
 begin
 btn1.Destroy;
@@ -103,7 +128,7 @@ begin
     SeriesOfButtons := TCategoryButtons.Create(Self);
     SeriesOfButtons.Parent := Self;
 
-    SeriesOfButtons.Left := 20;
+    SeriesOfButtons.Left := 220;
     SeriesOfButtons.Top  := 40;
     SeriesOfButtons.Height:=120;
     SeriesOfButtons.Width:=150;
@@ -117,10 +142,10 @@ begin
     btn.Category.Color:=clRed;
     btn.OnClick:=dynCtgZapisz;
 
-    btn1 := Category.Items.Add();
+  {  btn1 := Category.Items.Add();
     btn1.Caption:='Anuluj';
     btn1.OnClick:=dynCtgAnuluj;
-
+   }
     btn2 := Category.Items.Add();
     btn2.Caption:='Zamknij';
     btn2.OnClick:=dynCtgZamknij;
@@ -157,7 +182,7 @@ var dynButton : TButton;
 begin
     dynButton := TButton.Create(Self);
     dynButton.Parent:=Form1;
-    dynButton.Left:=20;
+    dynButton.Left:=320;
     dynButton.Top:=20;
     dynButton.Height:=55;
     dynButton.Width:=100;
