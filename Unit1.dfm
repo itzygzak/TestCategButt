@@ -90,6 +90,7 @@ object Form1: TForm1
     TabOrder = 4
     OnClick = btn3aClick
   end
+<<<<<<< HEAD
   object btn1: TButton
     Left = 520
     Top = 8
@@ -147,5 +148,15 @@ object Form1: TForm1
         end
       end
     end
+=======
+  object btn1234: TButton
+    Left = 288
+    Top = 184
+    Width = 75
+    Height = 25
+    Caption = 'btn1234'
+    TabOrder = 5
+    OnClick = btn1234Click
+>>>>>>> c86b3e5e355c2e7b7ea0d7aa7643eaad10792e1a
   end
 end

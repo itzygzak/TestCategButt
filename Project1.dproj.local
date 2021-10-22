@@ -1,10 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
+<<<<<<< HEAD
     <Transaction>1899.12.30 00:00:00.000.708,C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Dev\Delphi\TestCategButt\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.937,=C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.177,=C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.708,C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Dev\Delphi\TestCategButt\Unit1.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.026,C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Dev\Delphi\TestCategButt\Project1.dproj</Transaction>
+=======
+    <Transaction>1899.12.30 00:00:00.000.026,C:\Dev\Delphi\TestCategButt\Project1.dproj=C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.708,C:\Dev\Delphi\TestCategButt\Unit1.dfm=C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.177,=C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.937,=C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.708,C:\Dev\Delphi\TestCategButt\Unit1.pas=C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+>>>>>>> c86b3e5e355c2e7b7ea0d7aa7643eaad10792e1a
   </Transactions>
 </BorlandProject>
