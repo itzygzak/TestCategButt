@@ -28,6 +28,8 @@ type
     btn8: TButton;
     btn99: TButton;
     btn9: TButton;
+    btn10: TButton;
+    btn11: TButton;
     procedure btn1aClick(Sender: TObject);
     procedure dynButtonClick(Sender: TObject);
     procedure DynamicMenuButtonClick(Sender: TObject);
@@ -42,6 +44,8 @@ type
     procedure btn8Click(Sender: TObject);
     procedure btn99Click(Sender: TObject);
     procedure btn9Click(Sender: TObject);
+    procedure btn10Click(Sender: TObject);
+    procedure btn11Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -232,6 +236,20 @@ begin
 
   if sender is TCategoryButtons then //true
     ShowMessage('Sender is TCategoryButtons');}
+end;
+
+procedure TForm1.btn10Click(Sender: TObject);
+var hW : HWND;
+begin
+hW := FindWindow(nil, 'Form1');
+ShowWindow(hW, SW_MAXIMIZE);
+end;
+
+procedure TForm1.btn11Click(Sender: TObject);
+var hW : HWND;
+begin
+hW := FindWindow(nil, 'Form1');
+SetWindowText(hW, 'Nowy tekst');
 end;
 
 procedure TForm1.btn1aClick(Sender: TObject);

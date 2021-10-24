@@ -68,7 +68,7 @@ object Form1: TForm1
     Top = 264
     Width = 75
     Height = 25
-    Caption = 'btn2a'
+    Caption = 'Hide split'
     TabOrder = 2
     OnClick = btn2aClick
   end
@@ -207,7 +207,7 @@ object Form1: TForm1
     Top = 336
     Width = 75
     Height = 25
-    Caption = 'btn8'
+    Caption = 'Napis na belce'
     TabOrder = 9
     OnClick = btn8Click
   end
@@ -216,7 +216,7 @@ object Form1: TForm1
     Top = 128
     Width = 75
     Height = 25
-    Caption = 'btn99'
+    Caption = 'Minimize'
     TabOrder = 10
     OnClick = btn99Click
   end
@@ -225,8 +225,26 @@ object Form1: TForm1
     Top = 344
     Width = 75
     Height = 25
-    Caption = 'btn9'
+    Caption = 'Nowe okno'
     TabOrder = 11
     OnClick = btn9Click
+  end
+  object btn10: TButton
+    Left = 288
+    Top = 168
+    Width = 75
+    Height = 25
+    Caption = 'Maximize'
+    TabOrder = 12
+    OnClick = btn10Click
+  end
+  object btn11: TButton
+    Left = 280
+    Top = 216
+    Width = 75
+    Height = 25
+    Caption = 'Zmiana tekstu'
+    TabOrder = 13
+    OnClick = btn11Click
   end
 end
