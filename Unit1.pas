@@ -26,6 +26,8 @@ type
     btn6: TBitBtn;
     btn7: TButton;
     btn8: TButton;
+    btn99: TButton;
+    btn9: TButton;
     procedure btn1aClick(Sender: TObject);
     procedure dynButtonClick(Sender: TObject);
     procedure DynamicMenuButtonClick(Sender: TObject);
@@ -38,6 +40,8 @@ type
     procedure btn1Click(Sender: TObject);
     procedure btn7Click(Sender: TObject);
     procedure btn8Click(Sender: TObject);
+    procedure btn99Click(Sender: TObject);
+    procedure btn9Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,6 +56,7 @@ var
 
 
 implementation
+uses Unit2;
 
 {$R *.dfm}
 
@@ -183,6 +188,26 @@ end;
 procedure TForm1.btn8Click(Sender: TObject);
 begin
 Form1.Caption:='Ala ma kota';
+end;
+
+procedure TForm1.btn99Click(Sender: TObject);
+var
+  hW: HWND;
+begin
+ hW:= FindWindow(nil, 'Form1');
+ CloseWindow(hW);  //minimalizuje
+// ShowMessage('Nazwa okna' + hW);
+
+{ if h <> 0 then
+ begin
+  h:= FindWindowEx(h, 0, 'Edttitle', 0); //<- tutaj masz ju¿ swój upragniony uchwyt
+ end;}
+end;
+
+
+procedure TForm1.btn9Click(Sender: TObject);
+begin
+Form2.ShowModal;
 end;
 
 procedure TForm1.dynButtonClick(Sender: TObject);

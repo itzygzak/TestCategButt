@@ -166,7 +166,6 @@ object Form1: TForm1
           Margin = 5
           NumGlyphs = 2
           TabOrder = 2
-          ExplicitLeft = 1
         end
         object btn5: TBitBtn
           Left = 0
@@ -211,5 +210,23 @@ object Form1: TForm1
     Caption = 'btn8'
     TabOrder = 9
     OnClick = btn8Click
+  end
+  object btn99: TButton
+    Left = 280
+    Top = 128
+    Width = 75
+    Height = 25
+    Caption = 'btn99'
+    TabOrder = 10
+    OnClick = btn99Click
+  end
+  object btn9: TButton
+    Left = 440
+    Top = 344
+    Width = 75
+    Height = 25
+    Caption = 'btn9'
+    TabOrder = 11
+    OnClick = btn9Click
   end
 end
