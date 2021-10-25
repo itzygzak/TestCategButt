@@ -14,6 +14,13 @@ object Form1: TForm1
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
+  object lbl1: TLabel
+    Left = 304
+    Top = 384
+    Width = 16
+    Height = 13
+    Caption = 'lbl1'
+  end
   object ctgryBtns1: TCategoryButtons
     Left = 632
     Top = 8
@@ -133,13 +140,16 @@ object Form1: TForm1
         Height = 256
         Caption = 'ctgryPnl1'
         Color = 10066227
+        CollapsedHotImageIndex = 1
+        CollapsedImageIndex = 1
+        CollapsedPressedImageIndex = 1
         TabOrder = 0
         object btn2: TBitBtn
+          AlignWithMargins = True
           Left = 0
-          Top = 140
-          Width = 196
+          Top = 170
+          Width = 190
           Height = 25
-          Align = alTop
           Caption = 'e'
           Margin = 5
           TabOrder = 0
@@ -179,6 +189,7 @@ object Form1: TForm1
           Margin = 5
           NumGlyphs = 2
           TabOrder = 3
+          ExplicitTop = 45
         end
         object btn6: TBitBtn
           Left = 0
@@ -246,5 +257,14 @@ object Form1: TForm1
     Caption = 'Zmiana tekstu'
     TabOrder = 13
     OnClick = btn11Click
+  end
+  object btn12: TButton
+    Left = 248
+    Top = 264
+    Width = 75
+    Height = 25
+    Caption = 'btn12'
+    TabOrder = 14
+    OnClick = btn12Click
   end
 end

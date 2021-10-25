@@ -30,6 +30,8 @@ type
     btn9: TButton;
     btn10: TButton;
     btn11: TButton;
+    btn12: TButton;
+    lbl1: TLabel;
     procedure btn1aClick(Sender: TObject);
     procedure dynButtonClick(Sender: TObject);
     procedure DynamicMenuButtonClick(Sender: TObject);
@@ -46,6 +48,7 @@ type
     procedure btn9Click(Sender: TObject);
     procedure btn10Click(Sender: TObject);
     procedure btn11Click(Sender: TObject);
+    procedure btn12Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -250,7 +253,34 @@ var hW : HWND;
 begin
 hW := FindWindow(nil, 'Form1');
 SetWindowText(hW, 'Nowy tekst');
+
+
 end;
+
+procedure TForm1.btn12Click(Sender: TObject);
+var
+H : HWND;
+S : string;
+I : integer;
+begin
+H:=GetForegroundWindow;
+I := SendMessage(H, WM_GETTEXTLENGTH, 0, 0);
+I := I + 1;
+setlength(S, I);
+SendMessage(H, WM_GETTEXT,I,longint(@S[1]) );
+//Lbl1.Caption:='Nazwa okna: '+S;
+lbl1.Caption:= s;
+//end;
+if s = 'Form1' then
+begin
+ShowMessage('Ala ma kota');
+end
+else
+ShowMessage('Kot ma Ale');
+end;
+
+
+
 
 procedure TForm1.btn1aClick(Sender: TObject);
 var dynButton : TButton;
