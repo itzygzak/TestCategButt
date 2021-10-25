@@ -21,8 +21,8 @@ object Form2: TForm2
     Caption = 'lbl1'
   end
   object btn1: TButton
-    Left = 464
-    Top = 64
+    Left = 536
+    Top = 24
     Width = 75
     Height = 25
     Caption = 'btn1'
@@ -30,8 +30,8 @@ object Form2: TForm2
     OnClick = btn1Click
   end
   object btn2: TButton
-    Left = 480
-    Top = 136
+    Left = 536
+    Top = 88
     Width = 75
     Height = 25
     Caption = 'btn2'
@@ -90,5 +90,22 @@ object Form2: TForm2
       TabOrder = 4
       OnClick = btn7Click
     end
+  end
+  object lv1: TListView
+    Left = 248
+    Top = 32
+    Width = 273
+    Height = 150
+    BorderWidth = 1
+    Columns = <>
+    FullDrag = True
+    GridLines = True
+    IconOptions.AutoArrange = True
+    Items.ItemData = {
+      05640000000300000000000000FFFFFFFFFFFFFFFF00000000FFFFFFFF000000
+      000361006100610000000000FFFFFFFFFFFFFFFF00000000FFFFFFFF00000000
+      04730073007300730000000000FFFFFFFFFFFFFFFF00000000FFFFFFFF000000
+      00046400640064006400}
+    TabOrder = 3
   end
 end

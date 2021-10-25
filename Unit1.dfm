@@ -26,6 +26,8 @@ object Form1: TForm1
     Top = 8
     Width = 133
     Height = 209
+    BackgroundGradientDirection = gdVertical
+    BevelWidth = 4
     ButtonFlow = cbfVertical
     ButtonOptions = [boFullSize, boShowCaptions, boVerticalCategoryCaptions]
     Categories = <
@@ -58,11 +60,12 @@ object Form1: TForm1
           end>
       end>
     Color = 15395839
-    HotButtonColor = clBlue
+    HotButtonColor = clCream
     RegularButtonColor = 15395839
     SelectedButtonColor = 15395839
     ShowHint = True
     TabOrder = 0
+    StyleElements = []
   end
   object btn1a: TButton
     Left = 656
@@ -86,9 +89,21 @@ object Form1: TForm1
     Left = 424
     Top = 128
     Width = 185
-    Height = 89
+    Height = 130
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
     Lines.Strings = (
-      'mmo1')
+      'Klawisz 1'
+      ''
+      'Klawisz 2'
+      ''
+      'Klawisz 3'
+      ''
+      'Klawisz 4')
+    ParentFont = False
     TabOrder = 3
   end
   object btn3a: TButton
@@ -127,11 +142,22 @@ object Form1: TForm1
     OpenedWidth = 200
     Placement = svpLeft
     TabOrder = 7
+    object rzTlbrBtn1: TRzToolbarButton
+      Left = 15
+      Top = 356
+      Width = 169
+      Height = 41
+      Cursor = crSQLWait
+      Caption = 'XXX'
+      HotNumGlyphs = 0
+      UseHotGlyph = True
+    end
     object ctgryPnlGrp1: TCategoryPanelGroup
       Left = 0
       Top = 0
-      Height = 439
+      Height = 330
       VertScrollBar.Tracking = True
+      Align = alNone
       HeaderFont.Charset = DEFAULT_CHARSET
       HeaderFont.Color = clWindowText
       HeaderFont.Height = -11
@@ -140,7 +166,7 @@ object Form1: TForm1
       TabOrder = 0
       object ctgryPnl1: TCategoryPanel
         Top = 0
-        Height = 216
+        Height = 288
         Caption = 'ctgryPnl1'
         Color = 10066227
         CollapsedHotImageIndex = 1
@@ -148,10 +174,11 @@ object Form1: TForm1
         CollapsedPressedImageIndex = 1
         TabOrder = 0
         object btn13: TSpeedButton
-          Left = 8
-          Top = 206
+          Left = 0
+          Top = 189
           Width = 161
           Height = 22
+          Cursor = crHourGlass
           Caption = 'GGG'
           Flat = True
         end
@@ -171,10 +198,13 @@ object Form1: TForm1
           Width = 196
           Height = 35
           Align = alTop
-          Caption = 'd'
-          Enabled = False
+          Kind = bkCancel
+          Layout = blGlyphRight
           Margin = 5
+          NumGlyphs = 2
+          Style = bsWin31
           TabOrder = 1
+          StyleElements = []
         end
         object btn4: TBitBtn
           Left = 0
@@ -214,7 +244,7 @@ object Form1: TForm1
           Height = 35
           Hint = 'Dupint'
           Align = alTop
-          Kind = bkAbort
+          Kind = bkOK
           Layout = blGlyphRight
           Margin = 5
           NumGlyphs = 2
@@ -229,6 +259,23 @@ object Form1: TForm1
           Caption = 'a'
           Margin = 5
           TabOrder = 4
+        end
+        object rzBtBtn1: TRzBitBtn
+          Left = 13
+          Top = 206
+          Width = 169
+          Height = 36
+          HelpType = htKeyword
+          FrameColor = 10066227
+          ShowDownPattern = False
+          ShowFocusRect = False
+          BiDiMode = bdLeftToRight
+          Caption = 'rzBtBtn1'
+          Color = 10066227
+          HotTrack = True
+          ParentBiDiMode = False
+          TabOrder = 5
+          ThemeAware = False
         end
       end
     end
@@ -295,5 +342,50 @@ object Form1: TForm1
     Caption = 'btn12'
     TabOrder = 14
     OnClick = btn12Click
+  end
+  object btnGrp1: TButtonGroup
+    Left = 536
+    Top = 264
+    Height = 148
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    BevelWidth = 4
+    BorderStyle = bsNone
+    ButtonOptions = [gboAllowReorder, gboFullSize, gboGroupStyle, gboShowCaptions]
+    Items = <
+      item
+        Caption = 'Q'
+      end
+      item
+        Caption = 'W'
+      end
+      item
+        Caption = 'E'
+      end
+      item
+        Caption = 'R'
+      end>
+    TabOrder = 15
+    StyleElements = []
+  end
+  object redt1: TRichEdit
+    Left = 280
+    Top = 16
+    Width = 185
+    Height = 89
+    Color = 1250245
+    Font.Charset = EASTEUROPE_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Lines.Strings = (
+      'Klawisz 11'
+      ''
+      'Klawisz 12'
+      '')
+    ParentFont = False
+    TabOrder = 16
+    Zoom = 100
   end
 end

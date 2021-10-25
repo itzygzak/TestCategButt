@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.CategoryButtons,
-  Vcl.Buttons, Vcl.ExtCtrls, Vcl.WinXCtrls;
+  Vcl.Buttons, Vcl.ExtCtrls, Vcl.WinXCtrls, Vcl.ButtonGroup, RzButton,
+  Vcl.ComCtrls;
 
 type
   TForm1 = class(TForm)
@@ -33,6 +34,10 @@ type
     btn12: TButton;
     lbl1: TLabel;
     btn13: TSpeedButton;
+    rzTlbrBtn1: TRzToolbarButton;
+    btnGrp1: TButtonGroup;
+    rzBtBtn1: TRzBitBtn;
+    redt1: TRichEdit;
     procedure btn1aClick(Sender: TObject);
     procedure dynButtonClick(Sender: TObject);
     procedure DynamicMenuButtonClick(Sender: TObject);
