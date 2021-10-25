@@ -27,7 +27,7 @@ object Form1: TForm1
     Width = 133
     Height = 209
     ButtonFlow = cbfVertical
-    ButtonOptions = [boFullSize, boGradientFill, boShowCaptions, boVerticalCategoryCaptions]
+    ButtonOptions = [boFullSize, boShowCaptions, boVerticalCategoryCaptions]
     Categories = <
       item
         Color = 15395839
@@ -57,8 +57,11 @@ object Form1: TForm1
             Caption = 'F'
           end>
       end>
-    RegularButtonColor = clWhite
-    SelectedButtonColor = 15132390
+    Color = 15395839
+    HotButtonColor = clBlue
+    RegularButtonColor = 15395839
+    SelectedButtonColor = 15395839
+    ShowHint = True
     TabOrder = 0
   end
   object btn1a: TButton
@@ -137,17 +140,25 @@ object Form1: TForm1
       TabOrder = 0
       object ctgryPnl1: TCategoryPanel
         Top = 0
-        Height = 256
+        Height = 216
         Caption = 'ctgryPnl1'
         Color = 10066227
         CollapsedHotImageIndex = 1
         CollapsedImageIndex = 1
         CollapsedPressedImageIndex = 1
         TabOrder = 0
+        object btn13: TSpeedButton
+          Left = 8
+          Top = 206
+          Width = 161
+          Height = 22
+          Caption = 'GGG'
+          Flat = True
+        end
         object btn2: TBitBtn
           AlignWithMargins = True
           Left = 0
-          Top = 170
+          Top = 158
           Width = 190
           Height = 25
           Caption = 'e'
@@ -171,9 +182,28 @@ object Form1: TForm1
           Width = 196
           Height = 35
           Align = alTop
-          Kind = bkYes
+          Caption = '&Yes'
+          Default = True
+          Glyph.Data = {
+            DE010000424DDE01000000000000760000002800000024000000120000000100
+            0400000000006801000000000000000000001000000000000000000000000000
+            80000080000000808000800000008000800080800000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            3333333333333333333333330000333333333333333333333333F33333333333
+            00003333344333333333333333388F3333333333000033334224333333333333
+            338338F3333333330000333422224333333333333833338F3333333300003342
+            222224333333333383333338F3333333000034222A22224333333338F338F333
+            8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+            33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+            0000333333333A222433333333333338F338F33300003333333333A222433333
+            333333338F338F33000033333333333A222433333333333338F338F300003333
+            33333333A222433333333333338F338F00003333333333333A22433333333333
+            3338F38F000033333333333333A223333333333333338F830000333333333333
+            333A333333333333333338330000333333333333333333333333333333333333
+            0000}
           Layout = blGlyphRight
           Margin = 5
+          ModalResult = 6
           NumGlyphs = 2
           TabOrder = 2
         end
@@ -189,7 +219,6 @@ object Form1: TForm1
           Margin = 5
           NumGlyphs = 2
           TabOrder = 3
-          ExplicitTop = 45
         end
         object btn6: TBitBtn
           Left = 0

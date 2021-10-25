@@ -32,6 +32,7 @@ type
     btn11: TButton;
     btn12: TButton;
     lbl1: TLabel;
+    btn13: TSpeedButton;
     procedure btn1aClick(Sender: TObject);
     procedure dynButtonClick(Sender: TObject);
     procedure DynamicMenuButtonClick(Sender: TObject);
