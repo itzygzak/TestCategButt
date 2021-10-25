@@ -26,6 +26,12 @@ type
     btn6: TBitBtn;
     btn7: TButton;
     btn8: TButton;
+    btn99: TButton;
+    btn9: TButton;
+    btn10: TButton;
+    btn11: TButton;
+    btn12: TButton;
+    lbl1: TLabel;
     procedure btn1aClick(Sender: TObject);
     procedure dynButtonClick(Sender: TObject);
     procedure DynamicMenuButtonClick(Sender: TObject);
@@ -38,6 +44,11 @@ type
     procedure btn1Click(Sender: TObject);
     procedure btn7Click(Sender: TObject);
     procedure btn8Click(Sender: TObject);
+    procedure btn99Click(Sender: TObject);
+    procedure btn9Click(Sender: TObject);
+    procedure btn10Click(Sender: TObject);
+    procedure btn11Click(Sender: TObject);
+    procedure btn12Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,6 +63,7 @@ var
 
 
 implementation
+uses Unit2;
 
 {$R *.dfm}
 
@@ -185,6 +197,26 @@ begin
 Form1.Caption:='Ala ma kota';
 end;
 
+procedure TForm1.btn99Click(Sender: TObject);
+var
+  hW: HWND;
+begin
+ hW:= FindWindow(nil, 'Form1');
+ CloseWindow(hW);  //minimalizuje
+// ShowMessage('Nazwa okna' + hW);
+
+{ if h <> 0 then
+ begin
+  h:= FindWindowEx(h, 0, 'Edttitle', 0); //<- tutaj masz ju¿ swój upragniony uchwyt
+ end;}
+end;
+
+
+procedure TForm1.btn9Click(Sender: TObject);
+begin
+Form2.ShowModal;
+end;
+
 procedure TForm1.dynButtonClick(Sender: TObject);
 begin
   ShowMessage('Akcja z klawisza dynamicznego');
@@ -208,6 +240,47 @@ begin
   if sender is TCategoryButtons then //true
     ShowMessage('Sender is TCategoryButtons');}
 end;
+
+procedure TForm1.btn10Click(Sender: TObject);
+var hW : HWND;
+begin
+hW := FindWindow(nil, 'Form1');
+ShowWindow(hW, SW_MAXIMIZE);
+end;
+
+procedure TForm1.btn11Click(Sender: TObject);
+var hW : HWND;
+begin
+hW := FindWindow(nil, 'Form1');
+SetWindowText(hW, 'Nowy tekst');
+
+
+end;
+
+procedure TForm1.btn12Click(Sender: TObject);
+var
+H : HWND;
+S : string;
+I : integer;
+begin
+H:=GetForegroundWindow;
+I := SendMessage(H, WM_GETTEXTLENGTH, 0, 0);
+I := I + 1;
+setlength(S, I);
+SendMessage(H, WM_GETTEXT,I,longint(@S[1]) );
+//Lbl1.Caption:='Nazwa okna: '+S;
+lbl1.Caption:= s;
+//end;
+if s = 'Form1' then
+begin
+ShowMessage('Ala ma kota');
+end
+else
+ShowMessage('Kot ma Ale');
+end;
+
+
+
 
 procedure TForm1.btn1aClick(Sender: TObject);
 var dynButton : TButton;
