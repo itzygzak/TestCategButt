@@ -45,6 +45,7 @@ type
     procedure rzPnl2MouseLeave(Sender: TObject);
     procedure btn8Click(Sender: TObject);
     procedure btn9Click(Sender: TObject);
+    procedure ZmKolorMysz;
 
   private
     { Private declarations }
@@ -59,6 +60,11 @@ implementation
 
 {$R *.dfm}
 
+
+procedure TForm2.ZmKolorMysz;
+begin
+
+end;
 
 {procedure TListViewHeaders.FormCreate(Sender: TObject);
 var
@@ -87,7 +93,10 @@ var
 begin
  hW:= FindWindow(nil, 'Form1');
  //CloseWindow(hW);  //minimalizuje
- GetParent(hW);
+
+ SetWindowText(hW, 'Nowy tekst');
+
+ //GetParent(hW);
 
 end;
 procedure TForm2.btn3Click(Sender: TObject);
@@ -157,6 +166,7 @@ var KlPanel : TPanel;
 begin
       KlPanel := TPanel.Create(Self);
       KlPanel.Parent:=grp2;
+
   with KlPanel do
   begin
     Left:=4;
@@ -169,6 +179,9 @@ begin
     BorderWidth := 1;
     BevelWidth := 1;
     Align:=alBottom;
+    Caption := 'Menu 5';
+{    OnMouseMove :=
+    OnMouseLeave :=}
   end;
 
 end;

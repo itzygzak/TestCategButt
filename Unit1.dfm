@@ -15,11 +15,18 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
-    Left = 304
-    Top = 384
+    Left = 240
+    Top = 399
     Width = 16
     Height = 13
     Caption = 'lbl1'
+  end
+  object lbl2: TLabel
+    Left = 320
+    Top = 399
+    Width = 16
+    Height = 13
+    Caption = 'lbl2'
   end
   object ctgryBtns1: TCategoryButtons
     Left = 632

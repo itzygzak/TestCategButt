@@ -38,6 +38,7 @@ type
     btnGrp1: TButtonGroup;
     rzBtBtn1: TRzBitBtn;
     redt1: TRichEdit;
+    lbl2: TLabel;
     procedure btn1aClick(Sender: TObject);
     procedure dynButtonClick(Sender: TObject);
     procedure DynamicMenuButtonClick(Sender: TObject);
@@ -56,6 +57,7 @@ type
     procedure btn11Click(Sender: TObject);
     procedure btn12Click(Sender: TObject);
   private
+    function MyFont(ResName, ResType: string):Boolean;
     { Private declarations }
   public
     { Public declarations }
@@ -72,6 +74,26 @@ implementation
 uses Unit2;
 
 {$R *.dfm}
+{$R myfonts.RES}
+
+
+
+function TForm1.MyFont(ResName: string; ResType: string):Boolean;
+var ResStream : TResourceStream;
+    FontsCount : Integer;
+    hFont : THandle;
+
+begin
+ResStream := TResourceStream.Create(HInstance,PChar(ResName),PChar(ResType));
+hFont := AddFontMemResourceEx(ResStream.Memory,ResStream.Size,nil, @FontsCount);
+ResStream.Free;
+
+if (hFont <> 0) then
+begin
+SendMessage(HWND_BROADCAST,WM_FONTCHANGE,0,0);
+end;
+end;
+
 
 procedure TForm1.FormCreate(Sender: TObject);
 var
@@ -79,6 +101,15 @@ var
     Category        : TButtonCategory;
    // btn,btn1,btn2   : TButtonItem;
 begin
+    if MyFont('FontHigSpeed' , 'HS') then
+    begin
+//      lbl1.Font.Name := 'HIGHSPEED.TTF';
+      lbl2.Font.Name := 'HIGHSPEED.TTF';
+      lbl2.Font.Size := 24;
+    end;
+
+
+
 {    SeriesOfButtons := TCategoryButtons.Create(Self);
     SeriesOfButtons.Parent := Self;
 
@@ -258,6 +289,9 @@ procedure TForm1.btn11Click(Sender: TObject);
 var hW : HWND;
 begin
 hW := FindWindow(nil, 'Form1');
+
+
+
 SetWindowText(hW, 'Nowy tekst');
 
 

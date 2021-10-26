@@ -100,8 +100,8 @@ object Form2: TForm2
     TabOrder = 3
   end
   object rzLstVw1: TRzListView
-    Left = 408
-    Top = 8
+    Left = 369
+    Top = 7
     Width = 145
     Height = 53
     Columns = <
