@@ -15,18 +15,31 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
-    Left = 240
-    Top = 399
-    Width = 16
-    Height = 13
-    Caption = 'lbl1'
+    Left = 224
+    Top = 381
+    Width = 241
+    Height = 39
+    Caption = 'Za'#380#243#322#263' g'#281#347'l'#261' ja'#378#324
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -32
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
   end
   object lbl2: TLabel
-    Left = 320
-    Top = 399
+    Left = 449
+    Top = 418
     Width = 16
     Height = 13
     Caption = 'lbl2'
+  end
+  object rzLbl1: TRzLabel
+    Left = 224
+    Top = 341
+    Width = 82
+    Height = 13
+    Caption = 'Za'#380#243#322#263' g'#281#347'l'#261' ja'#378#324
   end
   object ctgryBtns1: TCategoryButtons
     Left = 632
@@ -306,8 +319,8 @@ object Form1: TForm1
     OnClick = btn7Click
   end
   object btn8: TButton
-    Left = 320
-    Top = 336
+    Left = 329
+    Top = 295
     Width = 75
     Height = 25
     Caption = 'Napis na belce'
@@ -325,7 +338,7 @@ object Form1: TForm1
   end
   object btn9: TButton
     Left = 440
-    Top = 344
+    Top = 305
     Width = 75
     Height = 25
     Caption = 'Nowe okno'

@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.CategoryButtons,
   Vcl.Buttons, Vcl.ExtCtrls, Vcl.WinXCtrls, Vcl.ButtonGroup, RzButton,
-  Vcl.ComCtrls;
+  Vcl.ComCtrls, RzLabel;
 
 type
   TForm1 = class(TForm)
@@ -39,6 +39,7 @@ type
     rzBtBtn1: TRzBitBtn;
     redt1: TRichEdit;
     lbl2: TLabel;
+    rzLbl1: TRzLabel;
     procedure btn1aClick(Sender: TObject);
     procedure dynButtonClick(Sender: TObject);
     procedure DynamicMenuButtonClick(Sender: TObject);
@@ -92,6 +93,7 @@ if (hFont <> 0) then
 begin
 SendMessage(HWND_BROADCAST,WM_FONTCHANGE,0,0);
 end;
+Result:=(hFont <> 0);
 end;
 
 
@@ -101,11 +103,22 @@ var
     Category        : TButtonCategory;
    // btn,btn1,btn2   : TButtonItem;
 begin
-    if MyFont('FontHigSpeed' , 'HS') then
+//   if MyFont('Fda' , 'FD') then
+//    if MyFont('FontGrasshopper' , 'FGASS') then
+ //    if MyFont('FSL' , 'FL') then
+ //   if MyFont('FontHigSPEED' , 'HS') then
+ //   if MyFont('FLI' , 'FI') then
+     if MyFont('FG' , 'IG') then
+
+
     begin
-//      lbl1.Font.Name := 'HIGHSPEED.TTF';
-      lbl2.Font.Name := 'HIGHSPEED.TTF';
-      lbl2.Font.Size := 24;
+    //  lbl1.Font.Name := 'HIGHSPEED';
+    //  lbl1.Font.Name := 'Grasshopper';
+//      rzlbl1.Font.Name := 'DAV-Sets';
+   //   rzLbl1.Font.Name :='ShadowsIntoLight';
+   //   rzLbl1.Font.Name := 'Lato-Italic';
+      rzLbl1.Font.Name := 'IrishGrover-Regular';
+      rzlbl1.Font.Size := 24;
     end;
 
 

@@ -191,18 +191,20 @@ end;
 
 procedure TForm2.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-RemoveFontResource('HIGHSPEED.TTF');
+RemoveFontResource('IrishGrover-Regular.ttf');
 SendMessage (HWND_BROADCAST,WM_FONTCHANGE,0,0);
 end;
 
 procedure TForm2.FormCreate(Sender: TObject);
 begin
- AddFontResource('HIGHSPEED.TTF');
+ AddFontResource('IrishGrover-Regular.ttf');
+// AddFontResource('CrystalItalic-R6A.ttf');
  SendMessage(HWND_BROADCAST,WM_FONTCHANGE,0,0);
 
 
  lbl2.Font.Size := 32;
- lbl1.Font.Name :='HIGHSPEED.TTF';
+ lbl2.Font.Name :='IrishGrover-Regular';
+// lbl2.Font.Name := 'CrystalItalic-R6A';
 
 end;
 
