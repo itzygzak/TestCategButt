@@ -262,20 +262,29 @@ object Form1: TForm1
         end
         object rzBtBtn1: TRzBitBtn
           Left = 13
-          Top = 206
+          Top = 214
           Width = 169
           Height = 36
-          HelpType = htKeyword
+          Margins.Left = 0
+          Margins.Top = 0
+          Margins.Right = 0
+          Margins.Bottom = 0
           FrameColor = 10066227
           ShowDownPattern = False
           ShowFocusRect = False
           BiDiMode = bdLeftToRight
           Caption = 'rzBtBtn1'
           Color = 10066227
+          DoubleBuffered = True
           HotTrack = True
+          HotTrackColorType = htctComplement
           ParentBiDiMode = False
+          ParentDoubleBuffered = False
+          TextShadowDepth = 1
           TabOrder = 5
           ThemeAware = False
+          Margin = 0
+          Spacing = 1
         end
       end
     end

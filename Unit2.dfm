@@ -14,8 +14,8 @@ object Form2: TForm2
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
-    Left = 264
-    Top = 216
+    Left = 168
+    Top = 264
     Width = 16
     Height = 13
     Caption = 'lbl1'
@@ -39,9 +39,9 @@ object Form2: TForm2
     OnClick = btn2Click
   end
   object grp1: TGroupBox
-    Left = 24
-    Top = 24
-    Width = 185
+    Left = 385
+    Top = 66
+    Width = 129
     Height = 225
     Caption = 'grp1'
     TabOrder = 2
@@ -91,21 +91,101 @@ object Form2: TForm2
       OnClick = btn7Click
     end
   end
-  object lv1: TListView
-    Left = 248
-    Top = 32
-    Width = 273
-    Height = 150
-    BorderWidth = 1
-    Columns = <>
-    FullDrag = True
-    GridLines = True
-    IconOptions.AutoArrange = True
-    Items.ItemData = {
-      05640000000300000000000000FFFFFFFFFFFFFFFF00000000FFFFFFFF000000
-      000361006100610000000000FFFFFFFFFFFFFFFF00000000FFFFFFFF00000000
-      04730073007300730000000000FFFFFFFFFFFFFFFF00000000FFFFFFFF000000
-      00046400640064006400}
+  object btnlv: TButton
+    Left = 520
+    Top = 135
+    Width = 75
+    Height = 25
+    Caption = 'btnlv'
     TabOrder = 3
+  end
+  object rzLstVw1: TRzListView
+    Left = 408
+    Top = 8
+    Width = 145
+    Height = 53
+    Columns = <
+      item
+        Caption = 'Menu'
+      end>
+    Items.ItemData = {
+      0548000000020000000000000001000000FFFFFFFF00000000FFFFFFFF000000
+      00054D0065006E00750031000000000002000000FFFFFFFF00000000FFFFFFFF
+      00000000054D0065006E0075003200}
+    TabOrder = 4
+  end
+  object grp2: TGroupBox
+    Left = 0
+    Top = 0
+    Width = 169
+    Height = 299
+    Align = alLeft
+    Color = clCream
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 5
+    ExplicitLeft = 8
+    ExplicitTop = 2
+    ExplicitHeight = 289
+    object rzPnl1: TRzPanel
+      Left = 4
+      Top = 23
+      Width = 160
+      Height = 41
+      BorderOuter = fsNone
+      BorderColor = clCream
+      Caption = 'Menu1'
+      Color = clCream
+      FlatColor = clCream
+      TabOrder = 0
+      OnClick = rzPnl1Click
+      OnMouseLeave = rzPnl1MouseLeave
+      OnMouseMove = rzPnl1MouseMove
+    end
+    object rzPnl2: TRzPanel
+      Left = 3
+      Top = 88
+      Width = 160
+      Height = 41
+      BorderOuter = fsNone
+      Caption = 'Menu 2'
+      Color = clCream
+      FlatColor = clCream
+      TabOrder = 1
+      OnMouseLeave = rzPnl2MouseLeave
+      OnMouseMove = rzPnl2MouseMove
+    end
+    object rzPnl3: TRzPanel
+      Left = 4
+      Top = 135
+      Width = 160
+      Height = 41
+      BorderOuter = fsNone
+      Caption = 'Menu 3'
+      Color = clCream
+      Enabled = False
+      FlatColor = clCream
+      TabOrder = 2
+      OnMouseLeave = rzPnl3MouseLeave
+      OnMouseMove = rzPnl3MouseMove
+    end
+  end
+  object btn8: TButton
+    Left = 216
+    Top = 8
+    Width = 75
+    Height = 25
+    Caption = 'btn8'
+    TabOrder = 6
+    OnClick = btn8Click
+  end
+  object btn9: TButton
+    Left = 256
+    Top = 200
+    Width = 75
+    Height = 25
+    Caption = 'btn9'
+    TabOrder = 7
+    OnClick = btn9Click
   end
 end
