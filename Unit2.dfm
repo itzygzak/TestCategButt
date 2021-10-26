@@ -11,6 +11,8 @@ object Form2: TForm2
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -19,6 +21,13 @@ object Form2: TForm2
     Width = 16
     Height = 13
     Caption = 'lbl1'
+  end
+  object lbl2: TLabel
+    Left = 192
+    Top = 112
+    Width = 16
+    Height = 13
+    Caption = 'lbl2'
   end
   object btn1: TButton
     Left = 536

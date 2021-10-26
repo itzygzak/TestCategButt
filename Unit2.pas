@@ -26,6 +26,7 @@ type
     rzPnl3: TRzPanel;
     btn8: TButton;
     btn9: TButton;
+    lbl2: TLabel;
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
@@ -46,6 +47,8 @@ type
     procedure btn8Click(Sender: TObject);
     procedure btn9Click(Sender: TObject);
     procedure ZmKolorMysz;
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
 
   private
     { Private declarations }
@@ -185,6 +188,24 @@ begin
   end;
 
 end;
+
+procedure TForm2.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+RemoveFontResource('HIGHSPEED.TTF');
+SendMessage (HWND_BROADCAST,WM_FONTCHANGE,0,0);
+end;
+
+procedure TForm2.FormCreate(Sender: TObject);
+begin
+ AddFontResource('HIGHSPEED.TTF');
+ SendMessage(HWND_BROADCAST,WM_FONTCHANGE,0,0);
+
+
+ lbl2.Font.Size := 32;
+ lbl1.Font.Name :='HIGHSPEED.TTF';
+
+end;
+
 
 procedure TForm2.rzPnl1Click(Sender: TObject);
 begin
