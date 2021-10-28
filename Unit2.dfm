@@ -133,9 +133,6 @@ object Form2: TForm2
     ParentBackground = False
     ParentColor = False
     TabOrder = 5
-    ExplicitLeft = 8
-    ExplicitTop = 2
-    ExplicitHeight = 289
     object rzPnl1: TRzPanel
       Left = 4
       Top = 23
@@ -150,6 +147,12 @@ object Form2: TForm2
       OnClick = rzPnl1Click
       OnMouseLeave = rzPnl1MouseLeave
       OnMouseMove = rzPnl1MouseMove
+      object img1: TImage
+        Left = 24
+        Top = 16
+        Width = 105
+        Height = 105
+      end
     end
     object rzPnl2: TRzPanel
       Left = 3

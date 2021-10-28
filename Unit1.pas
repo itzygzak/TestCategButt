@@ -13,7 +13,6 @@ type
     ctgryBtns1: TCategoryButtons;
     btn1a: TButton;
     btn2a: TButton;
-    mmo1: TMemo;
     btn3a: TButton;
     btn1: TButton;
     edttitle: TEdit;
@@ -37,7 +36,6 @@ type
     rzTlbrBtn1: TRzToolbarButton;
     btnGrp1: TButtonGroup;
     rzBtBtn1: TRzBitBtn;
-    redt1: TRichEdit;
     lbl2: TLabel;
     rzLbl1: TRzLabel;
     procedure btn1aClick(Sender: TObject);
@@ -278,7 +276,7 @@ procedure TForm1.DynamicMenuButtonClick(Sender: TObject);
 
 begin
     dynctgbutt := (Sender as TCategoryButtons);
-    Mmo1.Lines.Add(dynctgbutt.SelectedItem.Caption);
+    //Mmo1.Lines.Add(dynctgbutt.SelectedItem.Caption);
 
 
 

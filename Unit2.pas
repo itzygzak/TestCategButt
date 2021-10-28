@@ -27,6 +27,7 @@ type
     btn8: TButton;
     btn9: TButton;
     lbl2: TLabel;
+    img1: TImage;
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
@@ -46,7 +47,6 @@ type
     procedure rzPnl2MouseLeave(Sender: TObject);
     procedure btn8Click(Sender: TObject);
     procedure btn9Click(Sender: TObject);
-    procedure ZmKolorMysz;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
 
@@ -63,27 +63,6 @@ implementation
 
 {$R *.dfm}
 
-
-procedure TForm2.ZmKolorMysz;
-begin
-
-end;
-
-{procedure TListViewHeaders.FormCreate(Sender: TObject);
-var
-  Group, Item: Integer;
-begin
-  for Group in [1..4] do
-  begin
-    with ListView1.Items.Add do
-    begin
-      Text := Format('Header %d', [Group]);
-      Purpose := TListItemPurpose.Header;
-    end;
-     for Item in [1..10] do
-     ListView1.Items.Add.Text := Format('Regular item %d.%d', [Group, Item]);
-  end;
-end;}
 
 procedure TForm2.btn1Click(Sender: TObject);
 begin

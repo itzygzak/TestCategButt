@@ -105,34 +105,13 @@ object Form1: TForm1
     TabOrder = 2
     OnClick = btn2aClick
   end
-  object mmo1: TMemo
-    Left = 424
-    Top = 128
-    Width = 185
-    Height = 130
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    Lines.Strings = (
-      'Klawisz 1'
-      ''
-      'Klawisz 2'
-      ''
-      'Klawisz 3'
-      ''
-      'Klawisz 4')
-    ParentFont = False
-    TabOrder = 3
-  end
   object btn3a: TButton
     Left = 656
     Top = 295
     Width = 75
     Height = 25
     Caption = 'btn3a'
-    TabOrder = 4
+    TabOrder = 3
     OnClick = btn3aClick
   end
   object btn1: TButton
@@ -141,7 +120,7 @@ object Form1: TForm1
     Width = 75
     Height = 25
     Caption = 'btn1'
-    TabOrder = 5
+    TabOrder = 4
     OnClick = btn1Click
   end
   object edttitle: TEdit
@@ -149,7 +128,7 @@ object Form1: TForm1
     Top = 64
     Width = 121
     Height = 21
-    TabOrder = 6
+    TabOrder = 5
     Text = 'edttitle'
   end
   object spltvw1: TSplitView
@@ -161,7 +140,7 @@ object Form1: TForm1
     CompactWidth = 40
     OpenedWidth = 200
     Placement = svpLeft
-    TabOrder = 7
+    TabOrder = 6
     object rzTlbrBtn1: TRzToolbarButton
       Left = 15
       Top = 356
@@ -300,11 +279,11 @@ object Form1: TForm1
           HotTrackColorType = htctComplement
           ParentBiDiMode = False
           ParentDoubleBuffered = False
-          TextShadowDepth = 1
+          TextShadowDepth = 0
           TabOrder = 5
           ThemeAware = False
           Margin = 0
-          Spacing = 1
+          Spacing = 0
         end
       end
     end
@@ -315,7 +294,7 @@ object Form1: TForm1
     Width = 75
     Height = 25
     Caption = 'btn7'
-    TabOrder = 8
+    TabOrder = 7
     OnClick = btn7Click
   end
   object btn8: TButton
@@ -324,7 +303,7 @@ object Form1: TForm1
     Width = 75
     Height = 25
     Caption = 'Napis na belce'
-    TabOrder = 9
+    TabOrder = 8
     OnClick = btn8Click
   end
   object btn99: TButton
@@ -333,7 +312,7 @@ object Form1: TForm1
     Width = 75
     Height = 25
     Caption = 'Minimize'
-    TabOrder = 10
+    TabOrder = 9
     OnClick = btn99Click
   end
   object btn9: TButton
@@ -342,7 +321,7 @@ object Form1: TForm1
     Width = 75
     Height = 25
     Caption = 'Nowe okno'
-    TabOrder = 11
+    TabOrder = 10
     OnClick = btn9Click
   end
   object btn10: TButton
@@ -351,7 +330,7 @@ object Form1: TForm1
     Width = 75
     Height = 25
     Caption = 'Maximize'
-    TabOrder = 12
+    TabOrder = 11
     OnClick = btn10Click
   end
   object btn11: TButton
@@ -360,7 +339,7 @@ object Form1: TForm1
     Width = 75
     Height = 25
     Caption = 'Zmiana tekstu'
-    TabOrder = 13
+    TabOrder = 12
     OnClick = btn11Click
   end
   object btn12: TButton
@@ -369,7 +348,7 @@ object Form1: TForm1
     Width = 75
     Height = 25
     Caption = 'btn12'
-    TabOrder = 14
+    TabOrder = 13
     OnClick = btn12Click
   end
   object btnGrp1: TButtonGroup
@@ -394,27 +373,7 @@ object Form1: TForm1
       item
         Caption = 'R'
       end>
-    TabOrder = 15
+    TabOrder = 14
     StyleElements = []
-  end
-  object redt1: TRichEdit
-    Left = 280
-    Top = 16
-    Width = 185
-    Height = 89
-    Color = 1250245
-    Font.Charset = EASTEUROPE_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    Lines.Strings = (
-      'Klawisz 11'
-      ''
-      'Klawisz 12'
-      '')
-    ParentFont = False
-    TabOrder = 16
-    Zoom = 100
   end
 end
