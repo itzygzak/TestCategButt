@@ -140,7 +140,7 @@ object Form2: TForm2
       Height = 41
       BorderOuter = fsNone
       BorderColor = clCream
-      Caption = 'Menu1'
+      Caption = 'Dodaj nowego'
       Color = clCream
       FlatColor = clCream
       TabOrder = 0
@@ -179,7 +179,7 @@ object Form2: TForm2
       Width = 160
       Height = 41
       BorderOuter = fsNone
-      Caption = 'Menu 2'
+      Caption = 'Uzupe'#322'nij'
       Color = clCream
       FlatColor = clCream
       TabOrder = 1
@@ -192,9 +192,8 @@ object Form2: TForm2
       Width = 160
       Height = 41
       BorderOuter = fsNone
-      Caption = 'Menu 3'
+      Caption = 'Edytuj'
       Color = clCream
-      Enabled = False
       FlatColor = clCream
       TabOrder = 2
       OnMouseLeave = rzPnl3MouseLeave

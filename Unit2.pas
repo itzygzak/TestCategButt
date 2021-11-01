@@ -161,7 +161,7 @@ begin
     BorderWidth := 1;
     BevelWidth := 1;
     Align:=alBottom;
-    Caption := 'Menu 5';
+    Caption := 'Przypisz';
 {    OnMouseMove :=
     OnMouseLeave :=}
   end;
@@ -176,6 +176,17 @@ end;
 
 procedure TForm2.FormCreate(Sender: TObject);
 begin
+grp2.Color:=rgb(37,38,40);
+rzPnl1.Color:=rgb(37,38,40);
+rzPnl1.Font.Color:=clWhite;
+rzPnl1.Font.Size:=12;
+rzPnl2.Color:=rgb(37,38,40);
+rzPnl2.Font.Color:=clWhite;
+rzPnl2.Font.Size:=12;
+rzPnl3.Color:=rgb(37,38,40);
+rzPnl3.Font.Color:=clWhite;
+rzPnl3.Font.Size:=12;
+
  AddFontResource('IrishGrover-Regular.ttf');
 // AddFontResource('CrystalItalic-R6A.ttf');
  SendMessage(HWND_BROADCAST,WM_FONTCHANGE,0,0);
@@ -206,24 +217,24 @@ end;
 
 procedure TForm2.rzPnl2MouseLeave(Sender: TObject);
 begin
-rzPnl2.Color:=clCream;
+rzPnl2.Color:=rgb(182,186,181);//(37,38,40);//clWebLightSeaGreen;
 end;
 
 procedure TForm2.rzPnl2MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
-rzPnl2.Color:=clRed;
+rzPnl2.Color:=rgb(182,186,181);//(37,38,40);//clRed;
 end;
 
 procedure TForm2.rzPnl3MouseLeave(Sender: TObject);
 begin
-rzPnl3.Color:=clCream;
+rzPnl3.Color:=rgb(182,186,181);//clCream;
 end;
 
 procedure TForm2.rzPnl3MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
-rzPnl3.Color:=clRed;
+rzPnl3.Color:=RGB(182,186,181);
 end;
 
 end.
