@@ -14,6 +14,7 @@ type
     rzpnl3: TRzPanel;
     rzpnl2: TRzPanel;
     rzpnl1: TRzPanel;
+    lbl1: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure rzpnl2MouseLeave(Sender: TObject);
     procedure rzpnl2MouseMove(Sender: TObject; Shift: TShiftState; X,
@@ -24,6 +25,9 @@ type
     procedure rzpnl1MouseLeave(Sender: TObject);
     procedure rzpnl1MouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
+    procedure rzpnl3MouseActivate(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y, HitTest: Integer;
+      var MouseActivate: TMouseActivate);
   private
     { Private declarations }
   public
@@ -54,7 +58,7 @@ end;
 
 procedure TForm3.rzpnl1MouseLeave(Sender: TObject);
 begin
-rzPnl1.Color:=rgb(182,186,181);
+rzPnl1.Color:=rgb(37,38,40);//rgb(182,186,181);
 end;
 
 procedure TForm3.rzpnl1MouseMove(Sender: TObject; Shift: TShiftState; X,
@@ -65,7 +69,7 @@ end;
 
 procedure TForm3.rzpnl2MouseLeave(Sender: TObject);
 begin
-rzPnl2.Color:=rgb(182,186,181);
+rzPnl2.Color:=rgb(37,38,40);//rgb(182,186,181);
 end;
 
 procedure TForm3.rzpnl2MouseMove(Sender: TObject; Shift: TShiftState; X,
@@ -74,9 +78,16 @@ begin
 rzPnl2.Color:=rgb(182,186,181);
 end;
 
+procedure TForm3.rzpnl3MouseActivate(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y, HitTest: Integer;
+  var MouseActivate: TMouseActivate);
+begin
+rzpnl3.Color:=RGB(182,186,181);
+end;
+
 procedure TForm3.rzpnl3MouseLeave(Sender: TObject);
 begin
-rzPnl3.Color:=rgb(182,186,181);
+rzPnl3.Color:=rgb(37,38,40);//rgb(182,186,181);
 end;
 
 procedure TForm3.rzpnl3MouseMove(Sender: TObject; Shift: TShiftState; X,

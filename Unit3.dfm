@@ -14,6 +14,13 @@ object Form3: TForm3
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
+  object lbl1: TLabel
+    Left = 400
+    Top = 176
+    Width = 16
+    Height = 13
+    Caption = 'lbl1'
+  end
   object spltVw1: TSplitView
     Left = 0
     Top = 0
@@ -22,28 +29,25 @@ object Form3: TForm3
     OpenedWidth = 200
     Placement = svpLeft
     TabOrder = 0
-    ExplicitLeft = 304
-    ExplicitTop = 256
-    ExplicitHeight = 41
     object grp1: TGroupBox
       Left = 0
       Top = 0
       Width = 200
       Height = 416
       Align = alClient
+      Color = clBtnFace
+      ParentBackground = False
+      ParentColor = False
       TabOrder = 0
-      ExplicitLeft = 104
-      ExplicitTop = 136
-      ExplicitWidth = 185
-      ExplicitHeight = 105
       object rzpnl3: TRzPanel
-        Left = 1
-        Top = 128
-        Width = 185
+        Left = 2
+        Top = 120
+        Width = 196
         Height = 41
         BorderOuter = fsNone
         Caption = 'Zako'#324'cz'
         TabOrder = 0
+        OnMouseActivate = rzpnl3MouseActivate
         OnMouseLeave = rzpnl3MouseLeave
         OnMouseMove = rzpnl3MouseMove
       end
@@ -58,9 +62,6 @@ object Form3: TForm3
         TabOrder = 1
         OnMouseLeave = rzpnl2MouseLeave
         OnMouseMove = rzpnl2MouseMove
-        ExplicitLeft = 24
-        ExplicitTop = 104
-        ExplicitWidth = 185
       end
       object rzpnl1: TRzPanel
         Left = 2
@@ -73,9 +74,6 @@ object Form3: TForm3
         TabOrder = 2
         OnMouseLeave = rzpnl1MouseLeave
         OnMouseMove = rzpnl1MouseMove
-        ExplicitLeft = 24
-        ExplicitTop = 48
-        ExplicitWidth = 185
       end
     end
   end
