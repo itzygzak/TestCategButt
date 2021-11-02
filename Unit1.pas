@@ -38,6 +38,7 @@ type
     rzBtBtn1: TRzBitBtn;
     lbl2: TLabel;
     rzLbl1: TRzLabel;
+    btn14: TButton;
     procedure btn1aClick(Sender: TObject);
     procedure dynButtonClick(Sender: TObject);
     procedure DynamicMenuButtonClick(Sender: TObject);
@@ -55,6 +56,7 @@ type
     procedure btn10Click(Sender: TObject);
     procedure btn11Click(Sender: TObject);
     procedure btn12Click(Sender: TObject);
+    procedure btn14Click(Sender: TObject);
   private
     function MyFont(ResName, ResType: string):Boolean;
     { Private declarations }
@@ -70,7 +72,7 @@ var
 
 
 implementation
-uses Unit2;
+uses Unit2, Unit3;
 
 {$R *.dfm}
 {$R myfonts.RES}
@@ -332,6 +334,11 @@ end;
 
 
 
+
+procedure TForm1.btn14Click(Sender: TObject);
+begin
+Form3.ShowModal;
+end;
 
 procedure TForm1.btn1aClick(Sender: TObject);
 var dynButton : TButton;

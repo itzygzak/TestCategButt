@@ -376,4 +376,13 @@ object Form1: TForm1
     TabOrder = 14
     StyleElements = []
   end
+  object btn14: TButton
+    Left = 496
+    Top = 128
+    Width = 75
+    Height = 25
+    Caption = 'Okno 3'
+    TabOrder = 15
+    OnClick = btn14Click
+  end
 end
