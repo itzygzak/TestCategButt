@@ -15,6 +15,7 @@ type
     rzpnl2: TRzPanel;
     rzpnl1: TRzPanel;
     lbl1: TLabel;
+    pnl1: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure rzpnl2MouseLeave(Sender: TObject);
     procedure rzpnl2MouseMove(Sender: TObject; Shift: TShiftState; X,
@@ -28,6 +29,9 @@ type
     procedure rzpnl3MouseActivate(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y, HitTest: Integer;
       var MouseActivate: TMouseActivate);
+    procedure rzpnl1Click(Sender: TObject);
+    procedure pnl1Click(Sender: TObject);
+    procedure rzpnl2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -56,6 +60,29 @@ rzPnl3.Font.Size:=12;
 
 end;
 
+procedure TForm3.pnl1Click(Sender: TObject);
+begin
+  if spltVw1.Opened = True then
+    spltVw1.Close
+  else
+    spltVw1.Open;
+
+end;
+
+procedure TForm3.rzpnl1Click(Sender: TObject);
+var dynPanel : TPanel;
+begin
+    dynPanel:=TPanel.Create(Self);
+    dynPanel.Parent := Self;
+
+    dynPanel.Left := 120;
+    dynPanel.Top := 20;
+ {   dynPanel.Height := 300;
+    dynPanel.Width := 300;       }
+    dynPanel.Align := alTop;
+    dynPanel.BevelKind :=  bkFlat;
+end;
+
 procedure TForm3.rzpnl1MouseLeave(Sender: TObject);
 begin
 rzPnl1.Color:=rgb(37,38,40);//rgb(182,186,181);
@@ -65,6 +92,38 @@ procedure TForm3.rzpnl1MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
 rzPnl1.Color:=rgb(182,186,181);
+end;
+
+procedure TForm3.rzpnl2Click(Sender: TObject);
+var dynPanel : TPanel;
+    dynEdit :TEdit;
+    dynLabel : TLabel;
+begin
+    begin
+    dynPanel:=TPanel.Create(Self);
+    dynPanel.Parent := Self;
+
+    dynPanel.Left := 120;
+    dynPanel.Top := 20;
+ {   dynPanel.Height := 300;
+    dynPanel.Width := 300;       }
+    dynPanel.Align := alClient; //alRight;
+    dynPanel.BevelKind :=  bkFlat;
+    end;
+    begin
+    dynEdit:= TEdit.Create(Self);
+    dynEdit.Parent := dynPanel;
+    dynEdit.Height := 26;
+
+    dynEdit.Top := 30;
+    end;
+    begin
+    dynLabel:= TLabel.Create(Self);
+    dynLabel.Parent:= dynPanel;
+
+    dynLabel.Top:=20;
+    dynLabel.Caption := 'Wprowadü dane';
+    end;
 end;
 
 procedure TForm3.rzpnl2MouseLeave(Sender: TObject);

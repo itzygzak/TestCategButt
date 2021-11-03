@@ -10,6 +10,7 @@ object Form3: TForm3
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  FormStyle = fsMDIForm
   OldCreateOrder = False
   OnCreate = FormCreate
   PixelsPerInch = 96
@@ -60,6 +61,7 @@ object Form3: TForm3
         BorderOuter = fsNone
         Caption = 'Usu'#324
         TabOrder = 1
+        OnClick = rzpnl2Click
         OnMouseLeave = rzpnl2MouseLeave
         OnMouseMove = rzpnl2MouseMove
       end
@@ -72,9 +74,22 @@ object Form3: TForm3
         BorderOuter = fsNone
         Caption = 'Dodaj'
         TabOrder = 2
+        OnClick = rzpnl1Click
         OnMouseLeave = rzpnl1MouseLeave
         OnMouseMove = rzpnl1MouseMove
       end
     end
+  end
+  object pnl1: TPanel
+    Left = 652
+    Top = 367
+    Width = 185
+    Height = 41
+    BevelKind = bkFlat
+    BevelOuter = bvNone
+    BevelWidth = 2
+    Caption = 'pnl1'
+    TabOrder = 1
+    OnClick = pnl1Click
   end
 end
