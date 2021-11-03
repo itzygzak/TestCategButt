@@ -16,6 +16,7 @@ type
     rzpnl1: TRzPanel;
     lbl1: TLabel;
     pnl1: TPanel;
+    btn1: TButton;
     procedure FormCreate(Sender: TObject);
     procedure rzpnl2MouseLeave(Sender: TObject);
     procedure rzpnl2MouseMove(Sender: TObject; Shift: TShiftState; X,
@@ -32,6 +33,7 @@ type
     procedure rzpnl1Click(Sender: TObject);
     procedure pnl1Click(Sender: TObject);
     procedure rzpnl2Click(Sender: TObject);
+    procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,6 +46,14 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm3.btn1Click(Sender: TObject);
+begin
+if spltVw1.Placement = svpLeft then
+  spltVw1.Placement := svpRight
+  else
+  spltVw1.Placement := svpLeft;
+end;
 
 procedure TForm3.FormCreate(Sender: TObject);
 begin
@@ -121,7 +131,7 @@ begin
     dynLabel:= TLabel.Create(Self);
     dynLabel.Parent:= dynPanel;
 
-    dynLabel.Top:=20;
+    dynLabel.Top:=16;
     dynLabel.Caption := 'Wprowadü dane';
     end;
 end;

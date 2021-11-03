@@ -2,7 +2,7 @@ object Form2: TForm2
   Left = 0
   Top = 0
   Caption = 'Form2'
-  ClientHeight = 299
+  ClientHeight = 424
   ClientWidth = 635
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -10,7 +10,9 @@ object Form2: TForm2
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  FormStyle = fsMDIChild
   OldCreateOrder = False
+  Visible = True
   OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
@@ -127,12 +129,13 @@ object Form2: TForm2
     Left = 0
     Top = 0
     Width = 169
-    Height = 299
+    Height = 424
     Align = alLeft
     Color = clCream
     ParentBackground = False
     ParentColor = False
     TabOrder = 5
+    ExplicitHeight = 299
     object rzPnl1: TRzPanel
       Left = 4
       Top = 23

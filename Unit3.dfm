@@ -81,9 +81,9 @@ object Form3: TForm3
     end
   end
   object pnl1: TPanel
-    Left = 652
+    Left = 392
     Top = 367
-    Width = 185
+    Width = 109
     Height = 41
     BevelKind = bkFlat
     BevelOuter = bvNone
@@ -91,5 +91,14 @@ object Form3: TForm3
     Caption = 'pnl1'
     TabOrder = 1
     OnClick = pnl1Click
+  end
+  object btn1: TButton
+    Left = 408
+    Top = 320
+    Width = 75
+    Height = 25
+    Caption = 'btn1'
+    TabOrder = 2
+    OnClick = btn1Click
   end
 end
