@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, RzPanel, Vcl.ExtCtrls, Vcl.WinXCtrls,
-  Vcl.StdCtrls;
+  Vcl.StdCtrls, Vcl.ComCtrls;
 
 type
   TForm3 = class(TForm)
@@ -17,6 +17,8 @@ type
     lbl1: TLabel;
     pnl1: TPanel;
     btn1: TButton;
+    btn2: TButton;
+    pgc1: TPageControl;
     procedure FormCreate(Sender: TObject);
     procedure rzpnl2MouseLeave(Sender: TObject);
     procedure rzpnl2MouseMove(Sender: TObject; Shift: TShiftState; X,
@@ -34,6 +36,8 @@ type
     procedure pnl1Click(Sender: TObject);
     procedure rzpnl2Click(Sender: TObject);
     procedure btn1Click(Sender: TObject);
+    procedure rzpnl3Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -47,12 +51,23 @@ implementation
 
 {$R *.dfm}
 
+uses Unit4;
+
 procedure TForm3.btn1Click(Sender: TObject);
 begin
 if spltVw1.Placement = svpLeft then
   spltVw1.Placement := svpRight
   else
   spltVw1.Placement := svpLeft;
+end;
+
+procedure TForm3.btn2Click(Sender: TObject);
+begin
+  with TForm3.Create(Application) do
+  begin
+    ManualDock(pgc1);
+    Caption := Format('Nowa forma nr %d', [pgc1.PageCount]);
+  end;
 end;
 
 procedure TForm3.FormCreate(Sender: TObject);
@@ -145,6 +160,22 @@ procedure TForm3.rzpnl2MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
 rzPnl2.Color:=rgb(182,186,181);
+end;
+
+procedure TForm3.rzpnl3Click(Sender: TObject);
+var dynForm : TForm;
+begin
+//Form4.ShowModal;
+  dynForm:= TForm.Create(Self);
+  dynForm.Parent := Self;
+  dynForm.Height:=500;
+  dynForm.Width:=600;
+  dynForm.BorderStyle:=bsSizeable;
+  dynForm.Caption:='Okno dynamiczne';
+  dynForm.Visible:=True;
+
+  dynForm.BorderStyle:=bsNone;
+
 end;
 
 procedure TForm3.rzpnl3MouseActivate(Sender: TObject; Button: TMouseButton;

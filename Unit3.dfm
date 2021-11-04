@@ -10,14 +10,13 @@ object Form3: TForm3
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  FormStyle = fsMDIForm
   OldCreateOrder = False
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
-    Left = 400
-    Top = 176
+    Left = 248
+    Top = 332
     Width = 16
     Height = 13
     Caption = 'lbl1'
@@ -48,6 +47,7 @@ object Form3: TForm3
         BorderOuter = fsNone
         Caption = 'Zako'#324'cz'
         TabOrder = 0
+        OnClick = rzpnl3Click
         OnMouseActivate = rzpnl3MouseActivate
         OnMouseLeave = rzpnl3MouseLeave
         OnMouseMove = rzpnl3MouseMove
@@ -100,5 +100,21 @@ object Form3: TForm3
     Caption = 'btn1'
     TabOrder = 2
     OnClick = btn1Click
+  end
+  object btn2: TButton
+    Left = 408
+    Top = 280
+    Width = 75
+    Height = 25
+    Caption = 'btn2'
+    TabOrder = 3
+    OnClick = btn2Click
+  end
+  object pgc1: TPageControl
+    Left = 212
+    Top = 8
+    Width = 469
+    Height = 266
+    TabOrder = 4
   end
 end
