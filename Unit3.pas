@@ -63,7 +63,7 @@ end;
 
 procedure TForm3.btn2Click(Sender: TObject);
 begin
-  with TForm3.Create(Application) do
+  with TForm4.Create(Application) do
   begin
     ManualDock(pgc1);
     Caption := Format('Nowa forma nr %d', [pgc1.PageCount]);

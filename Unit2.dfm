@@ -10,7 +10,9 @@ object Form2: TForm2
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  FormStyle = fsMDIChild
   OldCreateOrder = False
+  Visible = True
   OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
@@ -133,7 +135,6 @@ object Form2: TForm2
     ParentBackground = False
     ParentColor = False
     TabOrder = 5
-    ExplicitHeight = 299
     object rzPnl1: TRzPanel
       Left = 4
       Top = 23
