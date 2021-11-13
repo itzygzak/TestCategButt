@@ -147,7 +147,7 @@ procedure TForm2.btn9Click(Sender: TObject);
 var KlPanel : TPanel;
 begin
       KlPanel := TPanel.Create(Self);
-      KlPanel.Parent:=grp2;
+      KlPanel.Parent:=form2;//grp2;
 
   with KlPanel do
   begin

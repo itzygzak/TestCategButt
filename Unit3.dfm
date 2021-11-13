@@ -3,7 +3,7 @@ object Form3: TForm3
   Top = 0
   Caption = 'Form3'
   ClientHeight = 416
-  ClientWidth = 845
+  ClientWidth = 843
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,6 +11,7 @@ object Form3: TForm3
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -40,7 +41,7 @@ object Form3: TForm3
       ParentColor = False
       TabOrder = 0
       object rzpnl3: TRzPanel
-        Left = 2
+        Left = 3
         Top = 120
         Width = 196
         Height = 41
