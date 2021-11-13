@@ -1,16 +1,21 @@
 object Form2: TForm2
+  AlignWithMargins = True
   Left = 0
   Top = 0
+  Width = 697
+  Height = 436
+  Align = alLeft
+  AutoScroll = True
   Caption = 'Form2'
-  ClientHeight = 424
-  ClientWidth = 635
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  FormStyle = fsMDIChild
   OldCreateOrder = False
+  Position = poMainFormCenter
   Visible = True
   OnClose = FormClose
   OnCreate = FormCreate
@@ -128,12 +133,13 @@ object Form2: TForm2
     Left = 0
     Top = 0
     Width = 169
-    Height = 424
+    Height = 397
     Align = alLeft
     Color = clCream
     ParentBackground = False
     ParentColor = False
     TabOrder = 5
+    ExplicitHeight = 424
     object rzPnl1: TRzPanel
       Left = 4
       Top = 23

@@ -172,6 +172,7 @@ procedure TForm2.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
 RemoveFontResource('IrishGrover-Regular.ttf');
 SendMessage (HWND_BROADCAST,WM_FONTCHANGE,0,0);
+Action := caFree;
 end;
 
 procedure TForm2.FormCreate(Sender: TObject);

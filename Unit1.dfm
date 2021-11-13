@@ -1,9 +1,10 @@
 object Form1: TForm1
   Left = 0
   Top = 0
+  Width = 1140
+  Height = 652
+  AutoScroll = True
   Caption = 'Form1'
-  ClientHeight = 439
-  ClientWidth = 773
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -137,12 +138,13 @@ object Form1: TForm1
     Left = 0
     Top = 0
     Width = 200
-    Height = 439
+    Height = 613
     CloseStyle = svcCompact
     CompactWidth = 40
     OpenedWidth = 200
     Placement = svpLeft
     TabOrder = 6
+    ExplicitHeight = 439
     object rzTlbrBtn1: TRzToolbarButton
       Left = 15
       Top = 356

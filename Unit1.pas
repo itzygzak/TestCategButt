@@ -103,6 +103,7 @@ var
     Category        : TButtonCategory;
    // btn,btn1,btn2   : TButtonItem;
 begin
+
 //   if MyFont('Fda' , 'FD') then
 //    if MyFont('FontGrasshopper' , 'FGASS') then
  //    if MyFont('FSL' , 'FL') then
@@ -264,7 +265,8 @@ end;
 
 procedure TForm1.btn9Click(Sender: TObject);
 begin
-Form2.ShowModal;
+ TForm2.Create(Self).Show;
+//Form2.Show;
 end;
 
 procedure TForm1.dynButtonClick(Sender: TObject);
