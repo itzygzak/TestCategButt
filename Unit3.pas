@@ -168,8 +168,10 @@ begin
 //Form4.ShowModal;
   dynForm:= TForm.Create(Self);
   dynForm.Parent := Self;
-  dynForm.Height:=500;
-  dynForm.Width:=600;
+  dynForm.Top:=100;
+  dynForm.Left:=60;
+  dynForm.Height:=150;
+  dynForm.Width:=160;
   dynForm.BorderStyle:=bsSizeable;
   dynForm.Caption:='Okno dynamiczne';
   dynForm.Visible:=True;

@@ -147,7 +147,7 @@ procedure TForm2.btn9Click(Sender: TObject);
 var KlPanel : TPanel;
 begin
       KlPanel := TPanel.Create(Self);
-      KlPanel.Parent:=grp2;
+      KlPanel.Parent:=form2;//grp2;
 
   with KlPanel do
   begin
@@ -172,6 +172,7 @@ procedure TForm2.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
 RemoveFontResource('IrishGrover-Regular.ttf');
 SendMessage (HWND_BROADCAST,WM_FONTCHANGE,0,0);
+Action := caFree;
 end;
 
 procedure TForm2.FormCreate(Sender: TObject);
