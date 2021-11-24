@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.CategoryButtons,
   Vcl.Buttons, Vcl.ExtCtrls, Vcl.WinXCtrls, Vcl.ButtonGroup, RzButton,
-  Vcl.ComCtrls, RzLabel;
+  Vcl.ComCtrls, RzLabel, Winapi.ShellAPI;
 
 type
   TForm1 = class(TForm)
@@ -39,6 +39,7 @@ type
     lbl2: TLabel;
     rzLbl1: TRzLabel;
     btn14: TButton;
+    btn15: TButton;
     procedure btn1aClick(Sender: TObject);
     procedure dynButtonClick(Sender: TObject);
     procedure DynamicMenuButtonClick(Sender: TObject);
@@ -57,6 +58,7 @@ type
     procedure btn11Click(Sender: TObject);
     procedure btn12Click(Sender: TObject);
     procedure btn14Click(Sender: TObject);
+    procedure btn15Click(Sender: TObject);
   private
     function MyFont(ResName, ResType: string):Boolean;
     { Private declarations }
@@ -338,6 +340,11 @@ end;
 procedure TForm1.btn14Click(Sender: TObject);
 begin
 Form3.ShowModal;
+end;
+
+procedure TForm1.btn15Click(Sender: TObject);
+begin
+ShellExecute(Handle, 'open', 'install.bat', '', 'C:\Dev\Delphi\testcategbutt', SW_SHOWNORMAL);
 end;
 
 procedure TForm1.btn1aClick(Sender: TObject);

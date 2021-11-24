@@ -387,4 +387,13 @@ object Form1: TForm1
     TabOrder = 15
     OnClick = btn14Click
   end
+  object btn15: TButton
+    Left = 304
+    Top = 48
+    Width = 75
+    Height = 25
+    Caption = 'Uruchom'
+    TabOrder = 16
+    OnClick = btn15Click
+  end
 end
