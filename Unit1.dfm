@@ -144,7 +144,6 @@ object Form1: TForm1
     OpenedWidth = 200
     Placement = svpLeft
     TabOrder = 6
-    ExplicitHeight = 439
     object rzTlbrBtn1: TRzToolbarButton
       Left = 15
       Top = 356

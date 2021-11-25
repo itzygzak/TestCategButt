@@ -346,7 +346,19 @@ end;
 
 procedure TForm1.btn15Click(Sender: TObject);
 begin
-ShellExecute(Handle, 'open', 'install.bat', '', 'C:\Dev\Delphi\testcategbutt', SW_SHOWNORMAL);
+case Application.MessageBox('Czy zainstalowaæ bazê ?', 'Application.Title',
+  MB_YESNO + MB_ICONINFORMATION) of
+  IDYES:
+    begin
+     ShellExecute(Handle, 'open', 'install.bat', '', 'C:\Dev\Delphi\testcategbutt', SW_SHOWNORMAL);
+    end;
+  IDNO:
+    begin
+      Close;
+    end;
+end;
+
+//ShellExecute(Handle, 'open', 'install.bat', '', 'C:\Dev\Delphi\testcategbutt', SW_SHOWNORMAL);
 end;
 
 procedure TForm1.btn1aClick(Sender: TObject);
