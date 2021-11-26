@@ -74,7 +74,7 @@ var
 
 
 implementation
-uses Unit2, Unit3;
+uses Unit2, Unit3, Unit5;
 
 {$R *.dfm}
 {$R myfonts.RES}
@@ -350,7 +350,9 @@ case Application.MessageBox('Czy zainstalowaæ bazê ?', 'Application.Title',
   MB_YESNO + MB_ICONINFORMATION) of
   IDYES:
     begin
-     ShellExecute(Handle, 'open', 'install.bat', '', 'C:\Dev\Delphi\testcategbutt', SW_SHOWNORMAL);
+     Form5.ShowModal;
+
+     //ShellExecute(Handle, 'open', 'install.bat', '', 'C:\Dev\Delphi\testcategbutt', SW_SHOWNORMAL);
     end;
   IDNO:
     begin
